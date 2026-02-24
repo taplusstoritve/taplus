@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hvala vam za vaše povpraševanje. Kontaktirali vas bomo v najkrajšem času.">
+<title>Hvala za povpraševanje | TA+ Čiščenje Ljubljana</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="lux">
+
+<header class="header">
+  <div class="container nav">
+    <a href="index.html">
+      <img src="images/logo.png" class="logo-img" alt="TA+">
+    </a>
+
+    <button class="hamburger" id="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="mobile-nav">
+      <a href="index.html">Domov</a>
+      <a href="storitve.html">Storitve</a>
+      <a href="index.html#kontakt">Pošljite povpraševanje</a>
+    </nav>
+
+    <a class="btn-gold" href="tel:+38641222359">Pokličite nas</a>
+  </div>
+</header>
+
+<section class="thank-you container" style="padding:120px 0;text-align:center;">
+  <h1 style="color:#f0d78c;margin-bottom:20px;">✓ Hvala za oddano povpraševanje!</h1>
+  <p style="font-size:18px;margin-bottom:30px;">Prejeli smo vašo pošto in vas bomo kontaktirali v manj kot 1 uri.</p>
+  <p style="margin-bottom:40px;">Imate nujno situacijo? – pokličite nas na <a href="tel:+38641222359" style="color:#c6a94a;">+386 41 222 359</a></p>
+  <a href="index.html" class="btn-gold">Nazaj na domačo stran</a>
+</section>
+
+<footer>
+  <div class="container footer-content">
+    <div class="footer-section">
+      <div>
+        <strong>TA +, čiščenje in ostale storitve, Tamara Meden s.p.</strong><br>
+        Gerbičeva ulica 5A, 1380 Cerknica<br>
+        Davčna številka: 54164168<br>
+        info@taplus.si
+      </div>
+      <div>© 2026 TA+</div>
+    </div>
+    
+    <div class="social-media">
+      <p><strong>Sledite nam</strong></p>
+      <a href="https://www.instagram.com/taplus.storitve/" target="_blank" class="social-link" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Hamburger menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function() {
+      mobileNav.classList.toggle('active');
+      hamburgerBtn.classList.toggle('active');
+    });
+    
+    // Close menu when clicking a link
+    const navLinks = mobileNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileNav.classList.remove('active');
+        hamburgerBtn.classList.remove('active');
+      });
+    });
+  }
+});
+
+// no Netlify-specific redirection needed when using Formspree – user lands here directly
+// optionally a timer could send them back to home after a few seconds
+
+setTimeout(function() {
+  window.location.href = '/index.html';
+}, 8000);
+</script>
+
+</body>
+</html>

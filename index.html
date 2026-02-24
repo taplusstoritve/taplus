@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TA+ | Premium čiščenje Ljubljana</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="lux">
+
+<header class="header">
+  <div class="container nav">
+    <a href="index.html">
+      <img src="images/logo.png" class="logo-img" alt="TA+">
+    </a>
+
+    <button class="hamburger" id="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="mobile-nav">
+      <a href="index.html">Domov</a>
+      <a href="storitve.html">Storitve</a>
+      <a href="#kontakt">Pošljite povpraševanje</a>
+    </nav>
+
+    <a class="btn-gold" href="tel:+38641222359">Pokličite nas</a>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Popolnost ima ime. TA+.</h1>
+    <p>Pošljite povpraševanje še danes za profesionalno čiščenje ali vzdrževanje po vaši meri. – odziv v manj kot 1 uri.</p>
+    <a href="#kontakt" class="btn-gold">Pridobite ponudbo</a>
+  </div>
+</section>
+
+
+<!-- STORITVE -->
+<section class="services container">
+  <h2>Naše storitve</h2>
+
+  <div class="service-grid">
+
+    <a href="storitve.html#redno" class="card-link">
+      <div class="card">
+        <img src="images/redno.jpg" alt="Redno ali generalno čiščenje">
+        <div class="card-content">
+          <h3>Redno ali generalno čiščenje</h3>
+          <p>Stanovanja, hiše ali kratkoročne namestitve.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="storitve.html#poslovno" class="card-link">
+      <div class="card">
+        <img src="images/generalno.jpg" alt="Čiščenje poslovnih prostorov">
+        <div class="card-content">
+          <h3>Čiščenje poslovnih prostorov</h3>
+          <p>Urejeno in profesionalno delovno okolje.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="storitve.html#popravila" class="card-link">
+      <div class="card">
+        <img src="images/popravila.jpg" alt="Manjša popravila ali vzdrževanje objektov">
+        <div class="card-content">
+          <h3>Manjša popravila ali vzdrževanje objektov</h3>
+          <p>Hišni mojster za male popravke in vzdrževanje.</p>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+
+<!-- KONTAKT -->
+<section id="kontakt" class="contact">
+  <div class="container">
+    <h2>Pridobite ponudbo</h2>
+
+    <form name="povprasevanje" method="POST" action="https://formspree.io/f/mreaonjq">
+
+  <!-- Formspree configuration -->
+  <input type="hidden" name="_next" value="thankyou.html">
+  <input type="hidden" name="_subject" value="Novo povpraševanje TA+">
+  <input type="hidden" name="_autoresponse" value="Hvala za vašo pošto! Prejeli smo vaše povpraševanje in vas bomo kontaktirali v manj kot 1 uri. TA+ čiščenje.">
+  <!-- simple honeypot for spam bots -->
+  <input type="text" name="_gotcha" style="display:none">
+
+      <input type="text" name="ime" placeholder="Ime in priimek" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="telefon" placeholder="Telefon" required>
+
+      <select name="storitev" required>
+        <option value="">Izberite storitev</option>
+        <option>Redno čiščenje</option>
+        <option>Generalno čiščenje</option>
+        <option>Čiščenje poslovnih prostorov</option>
+        <option>Manjša popravila in vzdrževanje</option>
+        <option>Čiščenje kratkoročnih namestitev</option>
+      </select>
+
+      <div class="date-time">
+        <input type="date" name="datum" required>
+        <input type="time" name="ura" required>
+      </div>
+
+      <textarea name="sporocilo" placeholder="Dodatne informacije"></textarea>
+
+      <button type="submit" class="btn-gold">Pošlji</button>
+    </form>
+    <p id="form-status" style="text-align:center;margin-top:20px;color:#c6a94a;display:none;"></p>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container footer-content">
+    <div class="footer-section">
+      <div>
+        <strong>TA +, čiščenje in ostale storitve, Tamara Meden s.p.</strong><br>
+        Gerbičeva ulica 5A, 1380 Cerknica<br>
+        Davčna številka: 54164168<br>
+        info@taplus.si
+      </div>
+      <div>© 2026 TA+</div>
+    </div>
+    
+    <div class="social-media">
+      <p><strong>Sledite nam</strong></p>
+      <a href="https://www.instagram.com/taplus.storitve/" target="_blank" class="social-link" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Hamburger menu toggle
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function() {
+      mobileNav.classList.toggle('active');
+      hamburgerBtn.classList.toggle('active');
+    });
+    
+    // Close menu when clicking a link
+    const navLinks = mobileNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileNav.classList.remove('active');
+        hamburgerBtn.classList.remove('active');
+      });
+    });
+  }
+  
+  // Form submission handler
+  const form = document.querySelector('form[name="povprasevanje"]');
+  const statusMsg = document.getElementById('form-status');
+  
+  if (form) {
+    form.addEventListener('submit', function() {
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Pošiljam...';
+      statusMsg.style.display = 'block';
+      statusMsg.textContent = 'Pošiljam vaše povpraševanje...';
+    });
+  }
+});
+</script>
+
+</body>
+</html>
