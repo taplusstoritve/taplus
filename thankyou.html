@@ -17,46 +17,69 @@
       <img src="images/logo.png" class="logo-img" alt="TA+">
     </a>
 
-    <button class="hamburger" id="hamburger-btn">
+    <!-- Desktop navigation -->
+    <nav>
+      <a href="index.html">Domov</a>
+      <a href="storitve.html">Storitve</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+    <!-- Mobile navigation -->
     <nav id="mobile-nav">
       <a href="index.html">Domov</a>
       <a href="storitve.html">Storitve</a>
-      <a href="index.html#kontakt">Pošljite povpraševanje</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
 
     <a class="btn-gold" href="tel:+38641222359">Pokličite nas</a>
   </div>
 </header>
 
-<section class="thank-you container" style="padding:120px 0;text-align:center;">
-  <h1 style="color:#f0d78c;margin-bottom:20px;">✓ Hvala za oddano povpraševanje!</h1>
-  <p style="font-size:18px;margin-bottom:30px;">Prejeli smo vašo pošto in vas bomo kontaktirali v manj kot 1 uri.</p>
-  <p style="margin-bottom:40px;">Imate nujno situacijo? – pokličite nas na <a href="tel:+38641222359" style="color:#c6a94a;">+386 41 222 359</a></p>
+<section class="thank-you container">
+  <h1>✓ Hvala za oddano povpraševanje!</h1>
+  <p class="message">Prejeli smo vašo pošto in vas bomo kontaktirali v manj kot 1 uri.</p>
+  <p class="urgent">Imate nujno situacijo? – pokličite nas na <a href="tel:+38641222359">+386 41 222 359</a></p>
   <a href="index.html" class="btn-gold">Nazaj na domačo stran</a>
 </section>
 
 <footer>
   <div class="container footer-content">
-    <div class="footer-section">
-      <div>
-        <strong>TA +, čiščenje in ostale storitve, Tamara Meden s.p.</strong><br>
-        Gerbičeva ulica 5A, 1380 Cerknica<br>
-        Davčna številka: 54164168<br>
-        info@taplus.si
-      </div>
-      <div>© 2026 TA+</div>
+    <div class="footer-col">
+      <h3>Podatki podjetja</h3>
+      <p>
+        <strong>TA+, čiščenje in ostale storitve</strong><br>
+        Tamara Meden s.p.<br>
+        Gerbičeva ulica 5A<br>
+        1380 Cerknica<br>
+        Davčna številka: 54164168
+      </p>
     </div>
     
-    <div class="social-media">
-      <p><strong>Sledite nam</strong></p>
-      <a href="https://www.instagram.com/taplus.storitve/" target="_blank" class="social-link" title="Instagram">
+    <div class="footer-col">
+      <h3>Kontaktni podatki</h3>
+      <p>
+        <i class="fas fa-phone"></i> <a href="tel:+38641222359">+386 41 222 359</a><br>
+        <i class="fas fa-envelope"></i> <a href="mailto:info@taplus.si">info@taplus.si</a>
+      </p>
+    </div>
+    
+    <div class="footer-col social-col">
+      <h3>Sledite nam</h3>
+      <a href="https://www.instagram.com/taplus.storitve/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 TA+ | Vse pravice pridržane</p>
     </div>
   </div>
 </footer>

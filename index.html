@@ -31,7 +31,7 @@
     <nav>
       <a href="index.html">Domov</a>
       <a href="storitve.html">Storitve</a>
-      <a href="#kontakt">Pošljite povpraševanje</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
 
     <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
@@ -44,7 +44,7 @@
     <nav id="mobile-nav">
       <a href="index.html">Domov</a>
       <a href="storitve.html">Storitve</a>
-      <a href="#kontakt">Pošljite povpraševanje</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
 
     <a class="btn-gold" href="tel:+38641222359">Pokličite nas</a>
@@ -61,7 +61,7 @@
     
     <div class="hero-buttons">
       <a href="storitve.html" class="btn-gold">Prikaži storitve</a>
-      <a href="#kontakt" class="btn-outline">Pošlji povpraševanje</a>
+      <a href="kontakt.html" class="btn-outline">Pošlji povpraševanje</a>
     </div>
   </div>
 </section>
@@ -127,7 +127,8 @@
         <i class="fas fa-award"></i>
       </div>
       <h3>Premium kakovost</h3>
-      <p>Uporabljamo vrhunske ekološke čistilne pripomočke in profesionalno opremo za odlične rezultate.</p>
+      <p>Uporabljamo preverjena čistila (ekološka*) pripomočke in opremo za odlične rezultate.</p>
+      <p class="eco-note">* Ekološka čistila na zahtevo stranke.</p>
     </div>
 
     <div class="why-card">
@@ -166,64 +167,65 @@
 </section>
 
 
-<!-- KONTAKT -->
-<section id="kontakt" class="contact">
-  <div class="container">
-    <h2>Pridobite ponudbo</h2>
+<section class="trusted-by container">
+  <h2>Zaupajo nam</h2>
 
-    <form name="povprasevanje" method="POST" action="https://formspree.io/f/mreaonjq">
+  <div class="trusted-grid">
+    <div class="trusted-card">
+      <img src="images/reference/Bistro Pepi.jpg" alt="Bistro Pepi">
+      <p>Bistro Pepi</p>
+    </div>
 
-  <!-- Formspree configuration -->
-  <input type="hidden" name="_next" value="thankyou.html">
-  <input type="hidden" name="_subject" value="Novo povpraševanje TA+">
-  <input type="hidden" name="_autoresponse" value="Hvala za vašo pošto! Prejeli smo vaše povpraševanje in vas bomo kontaktirali v manj kot 1 uri. TA+ čiščenje.">
-  <!-- simple honeypot for spam bots -->
-  <input type="text" name="_gotcha" style="display:none">
+    <div class="trusted-card">
+      <img src="images/reference/Gins.png" alt="Gins">
+      <p>Gins</p>
+    </div>
 
-      <input type="text" name="ime" placeholder="Ime in priimek" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="telefon" placeholder="Telefon" required>
+    <div class="trusted-card">
+      <img src="images/reference/Mesna Institucija.jpg" alt="Mesna Institucija">
+      <p>Mesna Institucija</p>
+    </div>
 
-      <select name="storitev" required>
-        <option value="">Izberite storitev</option>
-        <option>Redno čiščenje</option>
-        <option>Generalno čiščenje</option>
-        <option>Čiščenje poslovnih prostorov</option>
-        <option>Manjša popravila in vzdrževanje</option>
-        <option>Čiščenje kratkoročnih namestitev</option>
-      </select>
-
-      <div class="date-time">
-        <input type="date" name="datum" title="Izbira datuma" required>
-        <input type="time" name="ura" title="Izbira ure" required>
-      </div>
-
-      <textarea name="sporocilo" placeholder="Dodatne informacije"></textarea>
-
-      <button type="submit" class="btn-gold">Pošlji</button>
-    </form>
-    <p id="form-status" style="text-align:center;margin-top:20px;color:#c6a94a;display:none;"></p>
+    <div class="trusted-card">
+      <img src="images/reference/Playa.jpg" alt="Playa">
+      <p>Playa</p>
+    </div>
   </div>
 </section>
 
 
 <footer>
   <div class="container footer-content">
-    <div class="footer-section">
-      <div>
-        <strong>TA +, čiščenje in ostale storitve, Tamara Meden s.p.</strong><br>
-        Gerbičeva ulica 5A, 1380 Cerknica<br>
-        Davčna številka: 54164168<br>
-        info@taplus.si
-      </div>
-      <div>© 2026 TA+</div>
+    <div class="footer-col">
+      <h3>Podatki podjetja</h3>
+      <p>
+        <strong>TA+, čiščenje in ostale storitve</strong><br>
+        Tamara Meden s.p.<br>
+        Gerbičeva ulica 5A<br>
+        1380 Cerknica<br>
+        Davčna številka: 54164168
+      </p>
     </div>
     
-    <div class="social-media">
-      <p><strong>Sledite nam</strong></p>
-      <a href="https://www.instagram.com/taplus.storitve/" target="_blank" class="social-link" title="Instagram">
+    <div class="footer-col">
+      <h3>Kontaktni podatki</h3>
+      <p>
+        <i class="fas fa-phone"></i> <a href="tel:+38641222359">+386 41 222 359</a><br>
+        <i class="fas fa-envelope"></i> <a href="mailto:info@taplus.si">info@taplus.si</a>
+      </p>
+    </div>
+    
+    <div class="footer-col social-col">
+      <h3>Sledite nam</h3>
+      <a href="https://www.instagram.com/taplus.storitve/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 TA+ | Vse pravice pridržane</p>
     </div>
   </div>
 </footer>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kontaktirajte TA+ za profesionalno čiščenje in vzdrževanje. Odziv v manj kot 1 uri.">
+<title>Kontakt | TA+ Čiščenje Ljubljana</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="lux">
+
+<header class="header">
+  <div class="container nav">
+    <a href="index.html">
+      <img src="images/logo.png" class="logo-img" alt="TA+">
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav>
+      <a href="index.html">Domov</a>
+      <a href="storitve.html">Storitve</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile navigation -->
+    <nav id="mobile-nav">
+      <a href="index.html">Domov</a>
+      <a href="storitve.html">Storitve</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <a class="btn-gold" href="tel:+38641222359">Pokličite nas</a>
+  </div>
+</header>
+
+
+<!-- KONTAKT PAGE -->
+<section class="contact-page">
+  <div class="container">
+    <h1>Kontaktirajte nas</h1>
+    <p class="subtitle">Pripravljeni smo odgovoriti na vaša vprašanja v manj kot 1 uri</p>
+
+    <div class="contact-layout">
+      
+      <!-- LEFT: Form -->
+      <div class="contact-form">
+        <h2>Pošljite povpraševanje</h2>
+        
+        <form name="povprasevanje" method="POST" action="https://formspree.io/f/mreaonjq">
+          <!-- Formspree configuration -->
+          <input type="hidden" name="_subject" value="Novo povpraševanje TA+">
+          <input type="hidden" name="_autoresponse" value="Hvala za vašo pošto! Prejeli smo vaše povpraševanje in vas bomo kontaktirali v manj kot 1 uri. TA+ čiščenje.">
+          <!-- simple honeypot for spam bots -->
+          <input type="text" name="_gotcha" class="honeypot" title="Leave this field empty" tabindex="-1" autocomplete="off">
+
+          <input type="text" name="ime" placeholder="Ime in priimek" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="tel" name="telefon" placeholder="Telefon" required>
+
+          <select name="storitev" title="Izbira storitve" required>
+            <option value="">Izberite storitev</option>
+            <option>Redno čiščenje</option>
+            <option>Generalno čiščenje</option>
+            <option>Čiščenje poslovnih prostorov</option>
+            <option>Manjša popravila in vzdrževanje</option>
+            <option>Čiščenje kratkoročnih namestitev</option>
+          </select>
+
+          <div class="date-time">
+            <input type="date" name="datum" title="Izbira datuma" required>
+            <input type="time" name="ura" title="Izbira ure" required>
+          </div>
+
+          <textarea name="sporocilo" placeholder="Dodatne informacije"></textarea>
+
+          <button type="submit" class="btn-gold">Pošlji povpraševanje</button>
+        </form>
+        <p id="form-status" class="form-status"></p>
+      </div>
+
+      <!-- RIGHT: Company Info -->
+      <div class="contact-info">
+        <div class="info-box">
+          <h2>Podatki podjetja</h2>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div>
+              <strong>TA+, čiščenje in ostale storitve</strong><br>
+              Tamara Meden s.p.
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              Gerbičeva ulica 5A<br>
+              1380 Cerknica
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <a href="tel:+38641222359">+386 41 222 359</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <a href="mailto:info@taplus.si">info@taplus.si</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-file-invoice"></i>
+            </div>
+            <div>
+              <strong>Davčna številka:</strong> 54164168
+            </div>
+          </div>
+
+          <div class="social-links">
+            <p><strong>Sledite nam</strong></p>
+            <a href="https://www.instagram.com/taplus.storitve/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container footer-content">
+    <div class="footer-col">
+      <h3>Podatki podjetja</h3>
+      <p>
+        <strong>TA+, čiščenje in ostale storitve</strong><br>
+        Tamara Meden s.p.<br>
+        Gerbičeva ulica 5A<br>
+        1380 Cerknica<br>
+        Davčna številka: 54164168
+      </p>
+    </div>
+    
+    <div class="footer-col">
+      <h3>Kontaktni podatki</h3>
+      <p>
+        <i class="fas fa-phone"></i> <a href="tel:+38641222359">+386 41 222 359</a><br>
+        <i class="fas fa-envelope"></i> <a href="mailto:info@taplus.si">info@taplus.si</a>
+      </p>
+    </div>
+    
+    <div class="footer-col social-col">
+      <h3>Sledite nam</h3>
+      <a href="https://www.instagram.com/taplus.storitve/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2026 TA+ | Vse pravice pridržane</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Hamburger menu toggle
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function() {
+      mobileNav.classList.toggle('active');
+      hamburgerBtn.classList.toggle('active');
+    });
+    
+    // Close menu when clicking a link
+    const navLinks = mobileNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileNav.classList.remove('active');
+        hamburgerBtn.classList.remove('active');
+      });
+    });
+  }
+  
+  // Form submission handler
+  const form = document.querySelector('form[name="povprasevanje"]');
+  const statusMsg = document.getElementById('form-status');
+  
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Pošiljam...';
+      statusMsg.style.display = 'block';
+      statusMsg.textContent = 'Pošiljam vaše povpraševanje...';
+      
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          // Redirect to thank you page
+          window.location.href = 'thankyou.html';
+        } else {
+          statusMsg.textContent = 'Prišlo je do napake. Prosim poskusite ponovno.';
+          statusMsg.style.color = '#ef4444';
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }
+      } catch (error) {
+        statusMsg.textContent = 'Prišlo je do napake. Prosim poskusite ponovno.';
+        statusMsg.style.color = '#ef4444';
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    });
+  }
+});
+</script>
+
+</body>
+</html>
