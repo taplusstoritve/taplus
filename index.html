@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TA+ čiščenje in vzdrževanje - profesionalno čiščenje stanovanj, hiš in poslovnih prostorov v Ljubljani. Odziv v manj kot 1 uri.">
+<meta name="keywords" content="čiščenje Ljubljana, čiščenje stanovanja, čiščenje hiše, čiščenje poslovnih prostorov, vzdrževanje, hišni mojster">
+<meta name="author" content="TA+, Tamara Meden">
+<meta property="og:title" content="TA+ | Premium čiščenje Ljubljana">
+<meta property="og:description" content="Profesionalno čiščenje in vzdrževanje za stanovanja, hiše in poslovne prostore. Odziv v manj kot 1 uri.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TA+ | Premium čiščenje Ljubljana">
+<meta name="twitter:description" content="Profesionalno čiščenje in vzdrževanje po vaši meri.">
 <title>TA+ | Premium čiščenje Ljubljana</title>
 
 <link rel="stylesheet" href="css/style.css">
@@ -18,12 +27,20 @@
       <img src="images/logo.png" class="logo-img" alt="TA+">
     </a>
 
-    <button class="hamburger" id="hamburger-btn">
+    <!-- Desktop navigation -->
+    <nav>
+      <a href="index.html">Domov</a>
+      <a href="storitve.html">Storitve</a>
+      <a href="#kontakt">Pošljite povpraševanje</a>
+    </nav>
+
+    <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+    <!-- Mobile navigation -->
     <nav id="mobile-nav">
       <a href="index.html">Domov</a>
       <a href="storitve.html">Storitve</a>
@@ -39,9 +56,13 @@
 <section class="hero">
   <div class="overlay"></div>
   <div class="hero-content">
-    <h1>Popolnost ima ime. TA+.</h1>
-    <p>Pošljite povpraševanje še danes za profesionalno čiščenje ali vzdrževanje po vaši meri. – odziv v manj kot 1 uri.</p>
-    <a href="#kontakt" class="btn-gold">Pridobite ponudbo</a>
+    <h1>Profesionalno čiščenje in hišniška dela</h1>
+    <p>Stanovanja, hiše, poslovni prostori in vzdrževanje objektov</p>
+    
+    <div class="hero-buttons">
+      <a href="storitve.html" class="btn-gold">Prikaži storitve</a>
+      <a href="#kontakt" class="btn-outline">Pošlji povpraševanje</a>
+    </div>
   </div>
 </section>
 
@@ -86,6 +107,64 @@
 </section>
 
 
+<!-- ZAKAJ IZBRATI TA+ -->
+<section class="why-us container">
+  <h2>Zakaj izbrati TA+</h2>
+  <p class="subtitle">Profesionalnost, ki presega pričakovanja</p>
+  
+  <div class="why-grid">
+    
+    <div class="why-card">
+      <div class="why-icon">
+        <i class="fas fa-clock"></i>
+      </div>
+      <h3>Hiter odziv</h3>
+      <p>Odgovorimo na vaše povpraševanje v manj kot 1 uri in smo pripravljeni na delo takrat, ko vi potrebujete.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+        <i class="fas fa-award"></i>
+      </div>
+      <h3>Premium kakovost</h3>
+      <p>Uporabljamo vrhunske ekološke čistilne pripomočke in profesionalno opremo za odlične rezultate.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <h3>Izkušen tim</h3>
+      <p>Naša ekipa je usposobljena, zanesljiva in predana zagotavljanju najboljše storitve.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3>Zanesljivost</h3>
+      <p>Zaupanje strank je naša prioriteta. Delamo vestno, diskretno in zanesljivo.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+        <i class="fas fa-hand-sparkles"></i>
+      </div>
+      <h3>Pozornost do detajlov</h3>
+      <p>Vsak kotiček obravnavamo s posebno pozornostjo, da dosežemo popolnost.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+        <i class="fas fa-calendar-check"></i>
+      </div>
+      <h3>Fleksibilnost</h3>
+      <p>Prilagajamo se vašim potrebam in urniku. Redno ali enkratno čiščenje, izbira je vaša.</p>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- KONTAKT -->
 <section id="kontakt" class="contact">
@@ -115,8 +194,8 @@
       </select>
 
       <div class="date-time">
-        <input type="date" name="datum" required>
-        <input type="time" name="ura" required>
+        <input type="date" name="datum" title="Izbira datuma" required>
+        <input type="time" name="ura" title="Izbira ure" required>
       </div>
 
       <textarea name="sporocilo" placeholder="Dodatne informacije"></textarea>
