@@ -4,7 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Kontaktirajte TA+ za profesionalno čiščenje in vzdrževanje. Odziv v manj kot 1 uri.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Kontakt | TA+ Čiščenje Ljubljana">
+<meta property="og:description" content="Pošljite povpraševanje za storitve čiščenja in vzdrževanja. Odziv v manj kot 1 uri.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sl_SI">
+<meta property="og:site_name" content="TA+">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kontakt | TA+ Čiščenje Ljubljana">
+<meta name="twitter:description" content="Kontaktirajte TA+ in prejmite hiter odgovor na povpraševanje.">
 <title>Kontakt | TA+ Čiščenje Ljubljana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -62,12 +74,12 @@
           <!-- simple honeypot for spam bots -->
           <input type="text" name="_gotcha" class="honeypot" title="Leave this field empty" tabindex="-1" autocomplete="off">
 
-          <input type="text" name="ime" placeholder="Ime in priimek" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="tel" name="telefon" placeholder="Telefon" required>
+          <input type="text" name="ime" placeholder="Ime in priimek *" required>
+          <input type="email" name="email" placeholder="Email *" required>
+          <input type="tel" name="telefon" placeholder="Telefon *" required>
 
-          <select name="storitev" title="Izbira storitve" required>
-            <option value="">Izberite storitev</option>
+          <select name="storitev" title="Izbira storitve *" required>
+            <option value="">Izberite storitev *</option>
             <option>Redno čiščenje</option>
             <option>Generalno čiščenje</option>
             <option>Čiščenje poslovnih prostorov</option>
@@ -76,11 +88,18 @@
           </select>
 
           <div class="date-time">
-            <input type="date" name="datum" title="Izbira datuma" required>
-            <input type="time" name="ura" title="Izbira ure" required>
+            <input type="date" name="datum" title="Izbira datuma *" aria-label="Datum *" required>
+            <input type="time" name="ura" title="Izbira ure *" aria-label="Ura *" required>
           </div>
 
-          <textarea name="sporocilo" placeholder="Dodatne informacije"></textarea>
+          <textarea name="sporocilo" placeholder="Dodatne informacije *" required></textarea>
+
+          <p class="required-note">Polja označena z * so obvezna.</p>
+
+          <label class="consent-row" for="privacy-consent">
+            <input type="checkbox" id="privacy-consent" name="privacy_consent" required>
+            <span>Seznanjen/a sem s <a href="politika-zasebnosti.html" target="_blank" rel="noopener">Politiko zasebnosti</a> in soglašam z obdelavo podatkov za namen odgovora na povpraševanje. *</span>
+          </label>
 
           <button type="submit" class="btn-gold">Pošlji povpraševanje</button>
         </form>
@@ -173,6 +192,14 @@
         <i class="fas fa-envelope"></i> <a href="mailto:info@taplus.si">info@taplus.si</a>
       </p>
     </div>
+
+    <div class="footer-col">
+      <h3>Pravni dokumenti</h3>
+      <p>
+        <a href="politika-zasebnosti.html">Politika zasebnosti</a><br>
+        <a href="gdpr.html">GDPR</a>
+      </p>
+    </div>
     
     <div class="footer-col social-col">
       <h3>Sledite nam</h3>
@@ -255,6 +282,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<script src="js/cookie-notice.js"></script>
 
 </body>
 </html>

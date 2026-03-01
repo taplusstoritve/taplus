@@ -175,6 +175,25 @@ nav a:hover{
     display:block;
 }
 
+.services-page{
+    padding-top:150px;
+}
+
+.services-page-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.service-list{
+    text-align:left;
+    margin-left:20px;
+    list-style-position:inside;
+}
+
+.service-subtitle{
+    margin-top:15px;
+}
+
 /* ===== BEFORE AFTER ===== */
 .before-after{
     padding:80px 0;
@@ -447,6 +466,133 @@ nav a:hover{
     color:#f0d78c;
 }
 
+/* ===== LEGAL PAGE ===== */
+.legal-page{
+    padding:150px 0 80px 0;
+    min-height:70vh;
+}
+
+.legal-card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(198,169,74,0.2);
+    border-radius:20px;
+    padding:40px;
+}
+
+.legal-card h1{
+    color:#f0d78c;
+    margin-bottom:10px;
+    font-size:36px;
+}
+
+.legal-meta{
+    color:#c6a94a;
+    margin-bottom:28px;
+    font-size:14px;
+}
+
+.legal-card h2{
+    color:#f0d78c;
+    margin-top:24px;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.legal-card p,
+.legal-card li{
+    color:#d1d5db;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.legal-card ul{
+    margin:8px 0 12px 22px;
+}
+
+.legal-card a{
+    color:#f0d78c;
+    text-decoration:none;
+}
+
+.legal-card a:hover{
+    color:#c6a94a;
+}
+
+/* ===== COOKIE NOTICE ===== */
+.cookie-banner{
+    position:fixed;
+    left:20px;
+    right:20px;
+    bottom:20px;
+    z-index:4000;
+    background:rgba(15,17,22,0.96);
+    border:1px solid rgba(198,169,74,0.35);
+    border-radius:14px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.35);
+}
+
+.cookie-banner__content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    padding:16px 18px;
+}
+
+.cookie-banner p{
+    margin:0;
+    color:#d1d5db;
+    font-size:14px;
+}
+
+.cookie-banner a{
+    color:#f0d78c;
+    text-decoration:none;
+}
+
+.cookie-banner a:hover{
+    color:#c6a94a;
+}
+
+.cookie-banner__btn{
+    white-space:nowrap;
+    padding:10px 22px;
+}
+
+.cookie-banner__actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.cookie-banner__more{
+    color:#f0d78c;
+    text-decoration:none;
+    font-size:14px;
+    white-space:nowrap;
+}
+
+.cookie-banner__more:hover{
+    color:#c6a94a;
+}
+
+.cookie-banner__dismiss{
+    background:transparent;
+    border:1px solid rgba(198,169,74,0.45);
+    color:#f0d78c;
+    border-radius:50px;
+    padding:9px 18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s ease;
+    white-space:nowrap;
+}
+
+.cookie-banner__dismiss:hover{
+    background:rgba(198,169,74,0.12);
+    border-color:#c6a94a;
+}
+
 /* ===== CONTACT PAGE ===== */
 .contact-page{
     padding:150px 0 100px 0;
@@ -509,6 +655,38 @@ nav a:hover{
 .contact-form textarea{
     min-height:120px;
     resize:vertical;
+}
+
+.consent-row{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:14px;
+    color:#d1d5db;
+    line-height:1.5;
+}
+
+.consent-row input[type="checkbox"]{
+    margin-top:4px;
+    width:16px;
+    height:16px;
+    accent-color:#c6a94a;
+    flex-shrink:0;
+}
+
+.consent-row a{
+    color:#f0d78c;
+    text-decoration:none;
+}
+
+.consent-row a:hover{
+    color:#c6a94a;
+}
+
+.required-note{
+    font-size:13px;
+    color:#c6a94a;
+    margin:-2px 0 4px 0;
 }
 
 .honeypot{
@@ -620,7 +798,7 @@ footer{
 
 .footer-content{
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(4, 1fr);
     gap:40px;
     padding-bottom:30px;
 }
@@ -917,6 +1095,43 @@ nav a{
     height:60px;
 }
 
+.legal-page{
+    padding:100px 0 60px 0;
+}
+
+.legal-card{
+    padding:24px;
+}
+
+.legal-card h1{
+    font-size:28px;
+}
+
+.legal-card h2{
+    font-size:20px;
+}
+
+.cookie-banner{
+    left:12px;
+    right:12px;
+    bottom:12px;
+}
+
+.cookie-banner__content{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.cookie-banner__actions{
+    width:100%;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+}
+
+.cookie-banner__btn{
+    align-self:flex-end;
+}
+
 }
 
 /* Medium devices (768px and up) */
@@ -986,7 +1201,7 @@ nav{
 }
 
 .footer-content{
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(4, 1fr);
 }
 
 .trusted-grid{
