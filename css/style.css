@@ -41,6 +41,7 @@ body{
 
 .logo-img{
     height:50px;
+    width:auto;
 }
 
 nav a{
@@ -49,7 +50,7 @@ nav a{
     color:#f5f5f5;
     font-weight:500;
     transition: background .22s ease, color .15s ease, box-shadow .22s ease, border-color .22s ease;
-    border:2px solid transparent; /* reserve space for hover border */
+    border:2px solid transparent;
     padding:6px 8px;
     border-radius:8px;
 }
@@ -58,6 +59,35 @@ nav a:hover{
     color:#111;
     background:linear-gradient(135deg,#c6a94a,#f0d78c);
     box-shadow:0 10px 25px rgba(198,169,74,0.18);
+    border-color:#c6a94a;
+}
+
+.lang-switch{
+    display:flex;
+    gap:6px;
+    align-items:center;
+}
+
+.lang-btn{
+    border:1px solid rgba(198,169,74,0.45);
+    background:transparent;
+    color:#f5f5f5;
+    border-radius:999px;
+    padding:6px 10px;
+    font-size:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.25s ease;
+}
+
+.lang-btn:hover{
+    border-color:#c6a94a;
+    color:#f0d78c;
+}
+
+.lang-btn.active{
+    background:linear-gradient(135deg,#c6a94a,#f0d78c);
+    color:#111;
     border-color:#c6a94a;
 }
 
@@ -192,6 +222,47 @@ nav a:hover{
 
 .service-subtitle{
     margin-top:15px;
+}
+
+.service-details{
+    margin-top:8px;
+}
+
+.service-details[hidden]{
+    display:none;
+}
+
+.service-toggle{
+    margin-top:10px;
+    width:100%;
+    border:1px solid rgba(198,169,74,0.35);
+    border-radius:10px;
+    background:rgba(198,169,74,0.08);
+    color:#f0d78c;
+    padding:8px 12px;
+    font-size:13px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.service-toggle__icon{
+    transition:transform 0.2s ease;
+}
+
+.service-toggle.is-open .service-toggle__icon{
+    transform:rotate(180deg);
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:18px;
 }
 
 /* ===== BEFORE AFTER ===== */
@@ -889,12 +960,16 @@ footer{
     order:1;
 }
 
-.nav .btn-gold {
+.nav .lang-switch {
     order:2;
 }
 
-.nav .hamburger {
+.nav .btn-gold {
     order:3;
+}
+
+.nav .hamburger {
+    order:4;
 }
 
 /* Hamburger button - show on mobile */
@@ -980,32 +1055,115 @@ nav a{
 }
 
 .btn-gold{
-    padding:10px 20px;
+    padding:10px 14px;
     font-size:13px;
 }
 
+.lang-btn{
+    padding:5px 8px;
+    font-size:11px;
+}
+
 .hero h1{
-    font-size:24px;
-    margin-bottom:15px;
+    font-size:19px;
+    margin-bottom:8px;
 }
 
 .hero p{
-    font-size:15px;
-    margin-bottom:20px;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.hero{
+    height:72vh;
+    padding-top:60px;
+}
+
+.hero-buttons{
+    gap:8px;
+}
+
+.hero-buttons .btn-gold,
+.hero-buttons .btn-outline{
+    padding:7px 12px;
+    font-size:11px;
 }
 
 .services h2{
-    font-size:26px;
-    margin-bottom:30px;
+    font-size:21px;
+    margin-bottom:16px;
 }
 
 .service-grid{
     grid-template-columns:1fr;
-    gap:20px;
+    gap:12px;
 }
 
 .card img{
-    height:200px;
+    height:150px;
+}
+
+.services:not(.services-page){
+    padding:78px 0 36px 0;
+}
+
+.services:not(.services-page) .card-content{
+    padding:12px;
+}
+
+.services:not(.services-page) .card h3{
+    font-size:15px;
+    margin-bottom:6px;
+}
+
+.services:not(.services-page) .card p{
+    font-size:12px;
+    line-height:1.35;
+}
+
+.why-us{
+    padding:32px 0;
+}
+
+.why-us h2{
+    font-size:21px;
+    margin-bottom:6px;
+}
+
+.why-us .subtitle{
+    font-size:12px;
+    margin-bottom:12px;
+}
+
+.why-grid{
+    gap:10px;
+    margin-top:6px;
+}
+
+.why-card{
+    padding:12px 10px;
+}
+
+.why-icon{
+    width:38px;
+    height:38px;
+    margin:0 auto 8px;
+    font-size:14px;
+}
+
+.why-card h3{
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.why-card p{
+    font-size:12px;
+    line-height:1.35;
+}
+
+.eco-note{
+    margin-top:4px;
+    font-size:10px;
 }
 
 .before-after h2{
@@ -1045,7 +1203,7 @@ nav a{
 
 .footer-content{
     grid-template-columns:1fr;
-    gap:30px;
+    gap:22px;
 }
 
 .footer-col h3{
@@ -1057,7 +1215,7 @@ nav a{
 }
 
 .thank-you{
-    padding:80px 0;
+    padding:70px 0;
 }
 
 .thank-you h1{
@@ -1070,20 +1228,20 @@ nav a{
 
 .contact-layout{
     grid-template-columns:1fr;
-    gap:40px;
+    gap:24px;
 }
 
 .info-box{
     position:static;
-    padding:30px;
+    padding:20px;
 }
 
 .contact-page{
-    padding:100px 0 60px 0;
+    padding:86px 0 44px 0;
 }
 
 .contact-page h1{
-    font-size:28px;
+    font-size:24px;
 }
 
 .trusted-grid{
@@ -1096,19 +1254,23 @@ nav a{
 }
 
 .legal-page{
-    padding:100px 0 60px 0;
+    padding:86px 0 44px 0;
 }
 
 .legal-card{
-    padding:24px;
+    padding:18px;
 }
 
 .legal-card h1{
-    font-size:28px;
+    font-size:24px;
 }
 
 .legal-card h2{
-    font-size:20px;
+    font-size:18px;
+}
+
+footer{
+    margin-top:56px;
 }
 
 .cookie-banner{
@@ -1150,6 +1312,10 @@ nav a{
     order:unset;
     flex:unset;
     text-align:unset;
+}
+
+.nav .lang-switch {
+    order:unset;
 }
 
 .nav .hamburger {
@@ -1208,6 +1374,48 @@ nav{
     grid-template-columns:repeat(4, 1fr);
 }
 
+}
+
+@media(min-width:993px){
+.services:not(.services-page) .service-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+}
+
+.services:not(.services-page) .card img{
+    height:220px;
+}
+}
+
+@media(max-width:390px){
+.hero{
+    height:68vh;
+}
+
+.hero h1{
+    font-size:17px;
+}
+
+.hero p{
+    font-size:11px;
+}
+
+.services:not(.services-page) .card img{
+    height:138px;
+}
+
+.services:not(.services-page) .card h3{
+    font-size:14px;
+}
+
+.services:not(.services-page) .card p,
+.why-card p{
+    font-size:11px;
+}
+
+.why-card h3{
+    font-size:13px;
+}
 }
 
 /* Large devices (992px and up) */

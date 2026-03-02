@@ -14,6 +14,10 @@
 <meta name="twitter:title" content="Kontakt | TA+ Čiščenje Ljubljana">
 <meta name="twitter:description" content="Kontaktirajte TA+ in prejmite hiter odgovor na povpraševanje.">
 <title>Kontakt | TA+ Čiščenje Ljubljana</title>
+<link rel="canonical" href="https://taplus.si/kontakt.html?lang=sl">
+<link rel="alternate" hreflang="sl" href="https://taplus.si/kontakt.html?lang=sl">
+<link rel="alternate" hreflang="en" href="https://taplus.si/kontakt.html?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://taplus.si/kontakt.html?lang=sl">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -32,10 +36,15 @@
 
     <!-- Desktop navigation -->
     <nav>
-      <a href="index.html">Domov</a>
-      <a href="storitve.html">Storitve</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" data-i18n="nav_home">Domov</a>
+      <a href="storitve.html" data-i18n="nav_services">Storitve</a>
+      <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
     </nav>
+
+    <div class="lang-switch" aria-label="Language switcher">
+      <button type="button" class="lang-btn active" data-lang="sl" aria-pressed="true">SL</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
 
     <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
       <span></span>
@@ -45,12 +54,12 @@
 
     <!-- Mobile navigation -->
     <nav id="mobile-nav">
-      <a href="index.html">Domov</a>
-      <a href="storitve.html">Storitve</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" data-i18n="nav_home">Domov</a>
+      <a href="storitve.html" data-i18n="nav_services">Storitve</a>
+      <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
     </nav>
 
-    <a class="btn-gold" href="tel:+38641222359">Pokličite nas</a>
+    <a class="btn-gold" href="tel:+38641222359" data-i18n="call_us">Pokličite nas</a>
   </div>
 </header>
 
@@ -58,50 +67,50 @@
 <!-- KONTAKT PAGE -->
 <section class="contact-page">
   <div class="container">
-    <h1>Kontaktirajte nas</h1>
-    <p class="subtitle">Pripravljeni smo odgovoriti na vaša vprašanja v manj kot 1 uri</p>
+    <h1 data-i18n="contact_title">Kontaktirajte nas</h1>
+    <p class="subtitle" data-i18n="contact_subtitle">Pripravljeni smo odgovoriti na vaša vprašanja v manj kot 1 uri</p>
 
     <div class="contact-layout">
       
       <!-- LEFT: Form -->
       <div class="contact-form">
-        <h2>Pošljite povpraševanje</h2>
+        <h2 data-i18n="form_title">Pošljite povpraševanje</h2>
         
         <form name="povprasevanje" method="POST" action="https://formspree.io/f/mreaonjq">
           <!-- Formspree configuration -->
-          <input type="hidden" name="_subject" value="Novo povpraševanje TA+">
-          <input type="hidden" name="_autoresponse" value="Hvala za vašo pošto! Prejeli smo vaše povpraševanje in vas bomo kontaktirali v manj kot 1 uri. TA+ čiščenje.">
+          <input type="hidden" name="_subject" value="Novo povpraševanje TA+" data-i18n-value="form_subject">
+          <input type="hidden" name="_autoresponse" value="Hvala za vašo pošto! Prejeli smo vaše povpraševanje in vas bomo kontaktirali v manj kot 1 uri. TA+ čiščenje." data-i18n-value="form_autoresponse">
           <!-- simple honeypot for spam bots -->
           <input type="text" name="_gotcha" class="honeypot" title="Leave this field empty" tabindex="-1" autocomplete="off">
 
-          <input type="text" name="ime" placeholder="Ime in priimek *" required>
-          <input type="email" name="email" placeholder="Email *" required>
-          <input type="tel" name="telefon" placeholder="Telefon *" required>
+          <input type="text" name="ime" placeholder="Ime in priimek *" data-i18n-placeholder="ph_name" required>
+          <input type="email" name="email" placeholder="Email *" data-i18n-placeholder="ph_email" required>
+          <input type="tel" name="telefon" placeholder="Telefon *" data-i18n-placeholder="ph_phone" required>
 
-          <select name="storitev" title="Izbira storitve *" required>
-            <option value="">Izberite storitev *</option>
-            <option>Redno čiščenje</option>
-            <option>Generalno čiščenje</option>
-            <option>Čiščenje poslovnih prostorov</option>
-            <option>Manjša popravila in vzdrževanje</option>
-            <option>Čiščenje kratkoročnih namestitev</option>
+          <select name="storitev" title="Izbira storitve *" data-i18n-title="title_service_select" required>
+            <option value="" data-i18n="service_select">Izberite storitev *</option>
+            <option data-i18n="service_1">Redno čiščenje</option>
+            <option data-i18n="service_2">Generalno čiščenje</option>
+            <option data-i18n="service_3">Čiščenje poslovnih prostorov</option>
+            <option data-i18n="service_4">Manjša popravila in vzdrževanje</option>
+            <option data-i18n="service_5">Čiščenje kratkoročnih namestitev</option>
           </select>
 
           <div class="date-time">
-            <input type="date" name="datum" title="Izbira datuma *" aria-label="Datum *" required>
-            <input type="time" name="ura" title="Izbira ure *" aria-label="Ura *" required>
+            <input type="date" name="datum" title="Izbira datuma *" aria-label="Datum *" data-i18n-title="title_date" data-i18n-aria-label="aria_date" required>
+            <input type="time" name="ura" title="Izbira ure *" aria-label="Ura *" data-i18n-title="title_time" data-i18n-aria-label="aria_time" required>
           </div>
 
-          <textarea name="sporocilo" placeholder="Dodatne informacije *" required></textarea>
+          <textarea name="sporocilo" placeholder="Dodatne informacije *" data-i18n-placeholder="ph_message" required></textarea>
 
-          <p class="required-note">Polja označena z * so obvezna.</p>
+          <p class="required-note" data-i18n="required_note">Polja označena z * so obvezna.</p>
 
           <label class="consent-row" for="privacy-consent">
             <input type="checkbox" id="privacy-consent" name="privacy_consent" required>
-            <span>Seznanjen/a sem s <a href="politika-zasebnosti.html" target="_blank" rel="noopener">Politiko zasebnosti</a> in soglašam z obdelavo podatkov za namen odgovora na povpraševanje. *</span>
+            <span data-i18n-html="consent_text">Seznanjen/a sem s <a href="politika-zasebnosti.html" target="_blank" rel="noopener">Politiko zasebnosti</a> in soglašam z obdelavo podatkov za namen odgovora na povpraševanje. *</span>
           </label>
 
-          <button type="submit" class="btn-gold">Pošlji povpraševanje</button>
+          <button type="submit" class="btn-gold" data-i18n="submit_btn">Pošlji povpraševanje</button>
         </form>
         <p id="form-status" class="form-status"></p>
       </div>
@@ -109,13 +118,13 @@
       <!-- RIGHT: Company Info -->
       <div class="contact-info">
         <div class="info-box">
-          <h2>Podatki podjetja</h2>
+          <h2 data-i18n="info_title">Podatki podjetja</h2>
           
           <div class="info-item">
             <div class="info-icon">
               <i class="fas fa-building"></i>
             </div>
-            <div>
+            <div data-i18n-html="company_name_block">
               <strong>TA+, čiščenje in ostale storitve</strong><br>
               Tamara Meden s.p.
             </div>
@@ -125,7 +134,7 @@
             <div class="info-icon">
               <i class="fas fa-map-marker-alt"></i>
             </div>
-            <div>
+            <div data-i18n-html="company_address_block">
               Gerbičeva ulica 5A<br>
               1380 Cerknica
             </div>
@@ -153,13 +162,13 @@
             <div class="info-icon">
               <i class="fas fa-file-invoice"></i>
             </div>
-            <div>
+            <div data-i18n-html="company_tax_block">
               <strong>Davčna številka:</strong> 54164168
             </div>
           </div>
 
           <div class="social-links">
-            <p><strong>Sledite nam</strong></p>
+            <p><strong data-i18n="follow_us">Sledite nam</strong></p>
             <a href="https://www.instagram.com/taplus.storitve/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
@@ -175,8 +184,8 @@
 <footer>
   <div class="container footer-content">
     <div class="footer-col">
-      <h3>Podatki podjetja</h3>
-      <p>
+      <h3 data-i18n="footer_company_title">Podatki podjetja</h3>
+      <p data-i18n-html="footer_company_text">
         <strong>TA+, čiščenje in ostale storitve</strong><br>
         Tamara Meden s.p.<br>
         Gerbičeva ulica 5A<br>
@@ -186,7 +195,7 @@
     </div>
     
     <div class="footer-col">
-      <h3>Kontaktni podatki</h3>
+      <h3 data-i18n="footer_contact_title">Kontaktni podatki</h3>
       <p>
         <i class="fas fa-phone"></i> <a href="tel:+38641222359">+386 41 222 359</a><br>
         <i class="fas fa-envelope"></i> <a href="mailto:info@taplus.si">info@taplus.si</a>
@@ -194,15 +203,15 @@
     </div>
 
     <div class="footer-col">
-      <h3>Pravni dokumenti</h3>
+      <h3 data-i18n="footer_legal_title">Pravni dokumenti</h3>
       <p>
-        <a href="politika-zasebnosti.html">Politika zasebnosti</a><br>
-        <a href="gdpr.html">GDPR</a>
+        <a href="politika-zasebnosti.html" data-i18n="footer_privacy">Politika zasebnosti</a><br>
+        <a href="gdpr.html" data-i18n="footer_gdpr">GDPR</a>
       </p>
     </div>
     
     <div class="footer-col social-col">
-      <h3>Sledite nam</h3>
+      <h3 data-i18n="footer_follow">Sledite nam</h3>
       <a href="https://www.instagram.com/taplus.storitve/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
@@ -211,13 +220,214 @@
   
   <div class="footer-bottom">
     <div class="container">
-      <p>© 2026 TA+ | Vse pravice pridržane</p>
+      <p data-i18n="footer_rights">© 2026 TA+ | Vse pravice pridržane</p>
     </div>
   </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const i18n = {
+    sl: {
+      page_title: 'Kontakt | TA+ Čiščenje Ljubljana',
+      meta_description: 'Kontaktirajte TA+ za profesionalno čiščenje in vzdrževanje. Odziv v manj kot 1 uri.',
+      og_title: 'Kontakt | TA+ Čiščenje Ljubljana',
+      og_description: 'Pošljite povpraševanje za storitve čiščenja in vzdrževanja. Odziv v manj kot 1 uri.',
+      og_locale: 'sl_SI',
+      twitter_title: 'Kontakt | TA+ Čiščenje Ljubljana',
+      twitter_description: 'Kontaktirajte TA+ in prejmite hiter odgovor na povpraševanje.',
+      nav_home: 'Domov',
+      nav_services: 'Storitve',
+      nav_contact: 'Kontakt',
+      call_us: 'Pokličite nas',
+      contact_title: 'Kontaktirajte nas',
+      contact_subtitle: 'Pripravljeni smo odgovoriti na vaša vprašanja v manj kot 1 uri',
+      form_title: 'Pošljite povpraševanje',
+      form_subject: 'Novo povpraševanje TA+',
+      form_autoresponse: 'Hvala za vašo pošto! Prejeli smo vaše povpraševanje in vas bomo kontaktirali v manj kot 1 uri. TA+ čiščenje.',
+      ph_name: 'Ime in priimek *',
+      ph_email: 'Email *',
+      ph_phone: 'Telefon *',
+      title_service_select: 'Izbira storitve *',
+      title_date: 'Izbira datuma *',
+      title_time: 'Izbira ure *',
+      aria_date: 'Datum *',
+      aria_time: 'Ura *',
+      service_select: 'Izberite storitev *',
+      service_1: 'Redno čiščenje',
+      service_2: 'Generalno čiščenje',
+      service_3: 'Čiščenje poslovnih prostorov',
+      service_4: 'Manjša popravila in vzdrževanje',
+      service_5: 'Čiščenje kratkoročnih namestitev',
+      ph_message: 'Dodatne informacije *',
+      required_note: 'Polja označena z * so obvezna.',
+      consent_text: 'Seznanjen/a sem s <a href="politika-zasebnosti.html" target="_blank" rel="noopener">Politiko zasebnosti</a> in soglašam z obdelavo podatkov za namen odgovora na povpraševanje. *',
+      submit_btn: 'Pošlji povpraševanje',
+      info_title: 'Podatki podjetja',
+      company_name_block: '<strong>TA+, čiščenje in ostale storitve</strong><br>Tamara Meden s.p.',
+      company_address_block: 'Gerbičeva ulica 5A<br>1380 Cerknica',
+      company_tax_block: '<strong>Davčna številka:</strong> 54164168',
+      follow_us: 'Sledite nam',
+      footer_company_title: 'Podatki podjetja',
+      footer_company_text: '<strong>TA+, čiščenje in ostale storitve</strong><br>Tamara Meden s.p.<br>Gerbičeva ulica 5A<br>1380 Cerknica<br>Davčna številka: 54164168',
+      footer_contact_title: 'Kontaktni podatki',
+      footer_legal_title: 'Pravni dokumenti',
+      footer_privacy: 'Politika zasebnosti',
+      footer_gdpr: 'GDPR',
+      footer_follow: 'Sledite nam',
+      footer_rights: '© 2026 TA+ | Vse pravice pridržane',
+      sending_button: 'Pošiljam...',
+      sending_status: 'Pošiljam vaše povpraševanje...',
+      error_status: 'Prišlo je do napake. Prosim poskusite ponovno.'
+    },
+    en: {
+      page_title: 'Contact | TA+ Cleaning Ljubljana',
+      meta_description: 'Contact TA+ for professional cleaning and maintenance. Response in less than 1 hour.',
+      og_title: 'Contact | TA+ Cleaning Ljubljana',
+      og_description: 'Send an inquiry for cleaning and maintenance services. Response in less than 1 hour.',
+      og_locale: 'en_US',
+      twitter_title: 'Contact | TA+ Cleaning Ljubljana',
+      twitter_description: 'Contact TA+ and get a fast response to your inquiry.',
+      nav_home: 'Home',
+      nav_services: 'Services',
+      nav_contact: 'Contact',
+      call_us: 'Call us',
+      contact_title: 'Contact us',
+      contact_subtitle: 'We are ready to answer your questions in under 1 hour',
+      form_title: 'Send an inquiry',
+      form_subject: 'New inquiry TA+',
+      form_autoresponse: 'Thank you for your message! We received your inquiry and will contact you in less than 1 hour. TA+ cleaning.',
+      ph_name: 'Full name *',
+      ph_email: 'Email *',
+      ph_phone: 'Phone *',
+      title_service_select: 'Service selection *',
+      title_date: 'Date selection *',
+      title_time: 'Time selection *',
+      aria_date: 'Date *',
+      aria_time: 'Time *',
+      service_select: 'Select a service *',
+      service_1: 'Regular cleaning',
+      service_2: 'Deep cleaning',
+      service_3: 'Commercial cleaning',
+      service_4: 'Minor repairs and maintenance',
+      service_5: 'Short-term rental cleaning',
+      ph_message: 'Additional information *',
+      required_note: 'Fields marked with * are required.',
+      consent_text: 'I have read the <a href="politika-zasebnosti.html" target="_blank" rel="noopener">Privacy Policy</a> and agree to data processing for the purpose of responding to this inquiry. *',
+      submit_btn: 'Send inquiry',
+      info_title: 'Company information',
+      company_name_block: '<strong>TA+, cleaning and other services</strong><br>Tamara Meden s.p.',
+      company_address_block: 'Gerbičeva ulica 5A<br>1380 Cerknica',
+      company_tax_block: '<strong>Tax number:</strong> 54164168',
+      follow_us: 'Follow us',
+      footer_company_title: 'Company information',
+      footer_company_text: '<strong>TA+, cleaning and other services</strong><br>Tamara Meden s.p.<br>Gerbičeva ulica 5A<br>1380 Cerknica<br>Tax number: 54164168',
+      footer_contact_title: 'Contact details',
+      footer_legal_title: 'Legal documents',
+      footer_privacy: 'Privacy policy',
+      footer_gdpr: 'GDPR',
+      footer_follow: 'Follow us',
+      footer_rights: '© 2026 TA+ | All rights reserved',
+      sending_button: 'Sending...',
+      sending_status: 'Sending your inquiry...',
+      error_status: 'Something went wrong. Please try again.'
+    }
+  };
+
+  const langButtons = document.querySelectorAll('.lang-btn');
+  const languageFromUrl = new URLSearchParams(window.location.search).get('lang');
+  let currentLanguage = (languageFromUrl && ['sl', 'en'].includes(languageFromUrl)) ? languageFromUrl : (localStorage.getItem('siteLanguage') || 'sl');
+
+  function setLanguage(lang) {
+    const selected = i18n[lang] ? lang : 'sl';
+    const translations = i18n[selected];
+
+    currentLanguage = selected;
+    document.documentElement.lang = selected;
+    document.title = translations.page_title;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+
+    if (metaDescription && translations.meta_description) metaDescription.setAttribute('content', translations.meta_description);
+    if (ogTitle && translations.og_title) ogTitle.setAttribute('content', translations.og_title);
+    if (ogDescription && translations.og_description) ogDescription.setAttribute('content', translations.og_description);
+    if (ogLocale && translations.og_locale) ogLocale.setAttribute('content', translations.og_locale);
+    if (twitterTitle && translations.twitter_title) twitterTitle.setAttribute('content', translations.twitter_title);
+    if (twitterDescription && translations.twitter_description) twitterDescription.setAttribute('content', translations.twitter_description);
+
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      if (translations[key]) {
+        element.textContent = translations[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(element => {
+      const key = element.getAttribute('data-i18n-html');
+      if (translations[key]) {
+        element.innerHTML = translations[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-title]').forEach(element => {
+      const key = element.getAttribute('data-i18n-title');
+      if (translations[key]) {
+        element.setAttribute('title', translations[key]);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(element => {
+      const key = element.getAttribute('data-i18n-aria-label');
+      if (translations[key]) {
+        element.setAttribute('aria-label', translations[key]);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+      const key = element.getAttribute('data-i18n-placeholder');
+      if (translations[key]) {
+        element.setAttribute('placeholder', translations[key]);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-value]').forEach(element => {
+      const key = element.getAttribute('data-i18n-value');
+      if (translations[key]) {
+        element.value = translations[key];
+      }
+    });
+
+    langButtons.forEach(button => {
+      const isActive = button.dataset.lang === selected;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    localStorage.setItem('siteLanguage', selected);
+
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set('lang', selected);
+    window.history.replaceState({}, '', `${currentUrl.pathname}${currentUrl.search}${currentUrl.hash}`);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', `https://taplus.si/kontakt.html?lang=${selected}`);
+    }
+  }
+
+  langButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      setLanguage(button.dataset.lang);
+    });
+  });
+
+  setLanguage(currentLanguage);
+
   // Hamburger menu toggle
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileNav = document.getElementById('mobile-nav');
@@ -249,9 +459,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
       btn.disabled = true;
-      btn.textContent = 'Pošiljam...';
+      btn.textContent = i18n[currentLanguage].sending_button;
       statusMsg.style.display = 'block';
-      statusMsg.textContent = 'Pošiljam vaše povpraševanje...';
+      statusMsg.textContent = i18n[currentLanguage].sending_status;
       
       try {
         const formData = new FormData(form);
@@ -265,15 +475,15 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (response.ok) {
           // Redirect to thank you page
-          window.location.href = 'thankyou.html';
+          window.location.href = `thankyou.html?lang=${currentLanguage}`;
         } else {
-          statusMsg.textContent = 'Prišlo je do napake. Prosim poskusite ponovno.';
+          statusMsg.textContent = i18n[currentLanguage].error_status;
           statusMsg.style.color = '#ef4444';
           btn.disabled = false;
           btn.textContent = originalText;
         }
       } catch (error) {
-        statusMsg.textContent = 'Prišlo je do napake. Prosim poskusite ponovno.';
+        statusMsg.textContent = i18n[currentLanguage].error_status;
         statusMsg.style.color = '#ef4444';
         btn.disabled = false;
         btn.textContent = originalText;

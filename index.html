@@ -16,13 +16,40 @@
 <meta name="twitter:title" content="TA+ | Premium čiščenje Ljubljana">
 <meta name="twitter:description" content="Profesionalno čiščenje in vzdrževanje po vaši meri.">
 <title>TA+ | Premium čiščenje Ljubljana</title>
+<link rel="canonical" href="https://taplus.si/index.html?lang=sl">
+<link rel="alternate" hreflang="sl" href="https://taplus.si/index.html?lang=sl">
+<link rel="alternate" hreflang="en" href="https://taplus.si/index.html?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://taplus.si/index.html?lang=sl">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preload" as="image" href="images/hero.jpg">
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TA+",
+  "description": "Professional cleaning and maintenance services in Ljubljana and surrounding area.",
+  "url": "https://taplus.si/index.html",
+  "telephone": "+38641222359",
+  "email": "info@taplus.si",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gerbičeva ulica 5A",
+    "addressLocality": "Cerknica",
+    "postalCode": "1380",
+    "addressCountry": "SI"
+  },
+  "areaServed": "Ljubljana",
+  "sameAs": [
+    "https://www.instagram.com/taplus.storitve/"
+  ]
+}
+</script>
 </head>
 
 <body class="lux">
@@ -35,10 +62,15 @@
 
     <!-- Desktop navigation -->
     <nav>
-      <a href="index.html">Domov</a>
-      <a href="storitve.html">Storitve</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" data-i18n="nav_home">Domov</a>
+      <a href="storitve.html" data-i18n="nav_services">Storitve</a>
+      <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
     </nav>
+
+    <div class="lang-switch" aria-label="Language switcher">
+      <button type="button" class="lang-btn active" data-lang="sl" aria-pressed="true">SL</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
 
     <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
       <span></span>
@@ -48,12 +80,12 @@
 
     <!-- Mobile navigation -->
     <nav id="mobile-nav">
-      <a href="index.html">Domov</a>
-      <a href="storitve.html">Storitve</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" data-i18n="nav_home">Domov</a>
+      <a href="storitve.html" data-i18n="nav_services">Storitve</a>
+      <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
     </nav>
 
-    <a class="btn-gold" href="tel:+38641222359">Pokličite nas</a>
+    <a class="btn-gold" href="tel:+38641222359" data-i18n="call_us">Pokličite nas</a>
   </div>
 </header>
 
@@ -62,12 +94,12 @@
 <section class="hero">
   <div class="overlay"></div>
   <div class="hero-content">
-    <h1>Profesionalno čiščenje in hišniška dela</h1>
-    <p>Stanovanja, hiše, poslovni prostori in vzdrževanje objektov</p>
+    <h1 data-i18n="hero_title">Profesionalno čiščenje in hišniška dela</h1>
+    <p data-i18n="hero_text">Stanovanja, hiše, poslovni prostori in vzdrževanje objektov</p>
     
     <div class="hero-buttons">
-      <a href="storitve.html" class="btn-gold">Prikaži storitve</a>
-      <a href="kontakt.html" class="btn-outline">Pošlji povpraševanje</a>
+      <a href="storitve.html" class="btn-gold" data-i18n="hero_btn_services">Prikaži storitve</a>
+      <a href="kontakt.html" class="btn-outline" data-i18n="hero_btn_contact">Pošlji povpraševanje</a>
     </div>
   </div>
 </section>
@@ -75,7 +107,7 @@
 
 <!-- STORITVE -->
 <section class="services container">
-  <h2>Naše storitve</h2>
+  <h2 data-i18n="services_title">Naše storitve</h2>
 
   <div class="service-grid">
 
@@ -83,8 +115,8 @@
       <div class="card">
         <img src="images/redno.jpg" alt="Redno ali generalno čiščenje" loading="lazy" decoding="async">
         <div class="card-content">
-          <h3>Redno ali generalno čiščenje</h3>
-          <p>Stanovanja, hiše ali kratkoročne namestitve.</p>
+          <h3 data-i18n="service_1_title">Redno ali generalno čiščenje</h3>
+          <p data-i18n="service_1_text">Stanovanja, hiše ali kratkoročne namestitve.</p>
         </div>
       </div>
     </a>
@@ -93,8 +125,8 @@
       <div class="card">
         <img src="images/generalno.jpg" alt="Čiščenje poslovnih prostorov" loading="lazy" decoding="async">
         <div class="card-content">
-          <h3>Čiščenje poslovnih prostorov</h3>
-          <p>Urejeno in profesionalno delovno okolje.</p>
+          <h3 data-i18n="service_2_title">Čiščenje poslovnih prostorov</h3>
+          <p data-i18n="service_2_text">Urejeno in profesionalno delovno okolje.</p>
         </div>
       </div>
     </a>
@@ -103,8 +135,8 @@
       <div class="card">
         <img src="images/popravila.jpg" alt="Manjša popravila ali vzdrževanje objektov" loading="lazy" decoding="async">
         <div class="card-content">
-          <h3>Manjša popravila ali vzdrževanje objektov</h3>
-          <p>Hišni mojster za male popravke in vzdrževanje.</p>
+          <h3 data-i18n="service_3_title">Manjša popravila ali vzdrževanje objektov</h3>
+          <p data-i18n="service_3_text">Hišni mojster za male popravke in vzdrževanje.</p>
         </div>
       </div>
     </a>
@@ -115,8 +147,8 @@
 
 <!-- ZAKAJ IZBRATI TA+ -->
 <section class="why-us container">
-  <h2>Zakaj izbrati TA+</h2>
-  <p class="subtitle">Profesionalnost, ki presega pričakovanja</p>
+  <h2 data-i18n="why_title">Zakaj izbrati TA+</h2>
+  <p class="subtitle" data-i18n="why_subtitle">Profesionalnost, ki presega pričakovanja</p>
   
   <div class="why-grid">
     
@@ -124,49 +156,49 @@
       <div class="why-icon">
         <i class="fas fa-clock"></i>
       </div>
-      <h3>Hiter odziv</h3>
-      <p>Odgovorimo na vaše povpraševanje v manj kot 1 uri in smo pripravljeni na delo takrat, ko vi potrebujete.</p>
+      <h3 data-i18n="why_1_title">Hiter odziv</h3>
+      <p data-i18n="why_1_text">Odgovorimo na vaše povpraševanje v manj kot 1 uri in smo pripravljeni na delo takrat, ko vi potrebujete.</p>
     </div>
 
     <div class="why-card">
       <div class="why-icon">
         <i class="fas fa-award"></i>
       </div>
-      <h3>Premium kakovost</h3>
-      <p>Uporabljamo preverjena čistila (ekološka*) pripomočke in opremo za odlične rezultate.</p>
-      <p class="eco-note">* Ekološka čistila na zahtevo stranke.</p>
+      <h3 data-i18n="why_2_title">Premium kakovost</h3>
+      <p data-i18n="why_2_text">Uporabljamo preverjena čistila (ekološka*) pripomočke in opremo za odlične rezultate.</p>
+      <p class="eco-note" data-i18n="why_2_note">* Ekološka čistila na zahtevo stranke.</p>
     </div>
 
     <div class="why-card">
       <div class="why-icon">
         <i class="fas fa-users"></i>
       </div>
-      <h3>Izkušen tim</h3>
-      <p>Naša ekipa je usposobljena, zanesljiva in predana zagotavljanju najboljše storitve.</p>
+      <h3 data-i18n="why_3_title">Izkušen tim</h3>
+      <p data-i18n="why_3_text">Naša ekipa je usposobljena, zanesljiva in predana zagotavljanju najboljše storitve.</p>
     </div>
 
     <div class="why-card">
       <div class="why-icon">
         <i class="fas fa-shield-alt"></i>
       </div>
-      <h3>Zanesljivost</h3>
-      <p>Zaupanje strank je naša prioriteta. Delamo vestno, diskretno in zanesljivo.</p>
+      <h3 data-i18n="why_4_title">Zanesljivost</h3>
+      <p data-i18n="why_4_text">Zaupanje strank je naša prioriteta. Delamo vestno, diskretno in zanesljivo.</p>
     </div>
 
     <div class="why-card">
       <div class="why-icon">
         <i class="fas fa-hand-sparkles"></i>
       </div>
-      <h3>Pozornost do detajlov</h3>
-      <p>Vsak kotiček obravnavamo s posebno pozornostjo, da dosežemo popolnost.</p>
+      <h3 data-i18n="why_5_title">Pozornost do detajlov</h3>
+      <p data-i18n="why_5_text">Vsak kotiček obravnavamo s posebno pozornostjo, da dosežemo popolnost.</p>
     </div>
 
     <div class="why-card">
       <div class="why-icon">
         <i class="fas fa-calendar-check"></i>
       </div>
-      <h3>Fleksibilnost</h3>
-      <p>Prilagajamo se vašim potrebam in urniku. Redno ali enkratno čiščenje, izbira je vaša.</p>
+      <h3 data-i18n="why_6_title">Fleksibilnost</h3>
+      <p data-i18n="why_6_text">Prilagajamo se vašim potrebam in urniku. Redno ali enkratno čiščenje, izbira je vaša.</p>
     </div>
 
   </div>
@@ -174,7 +206,7 @@
 
 
 <section class="trusted-by container">
-  <h2>Zaupajo nam</h2>
+  <h2 data-i18n="trusted_title">Zaupajo nam</h2>
 
   <div class="trusted-grid">
     <div class="trusted-card">
@@ -199,12 +231,11 @@
   </div>
 </section>
 
-
 <footer>
   <div class="container footer-content">
     <div class="footer-col">
-      <h3>Podatki podjetja</h3>
-      <p>
+      <h3 data-i18n="footer_company_title">Podatki podjetja</h3>
+      <p data-i18n-html="footer_company_text">
         <strong>TA+, čiščenje in ostale storitve</strong><br>
         Tamara Meden s.p.<br>
         Gerbičeva ulica 5A<br>
@@ -214,7 +245,7 @@
     </div>
     
     <div class="footer-col">
-      <h3>Kontaktni podatki</h3>
+      <h3 data-i18n="footer_contact_title">Kontaktni podatki</h3>
       <p>
         <i class="fas fa-phone"></i> <a href="tel:+38641222359">+386 41 222 359</a><br>
         <i class="fas fa-envelope"></i> <a href="mailto:info@taplus.si">info@taplus.si</a>
@@ -222,15 +253,15 @@
     </div>
 
     <div class="footer-col">
-      <h3>Pravni dokumenti</h3>
+      <h3 data-i18n="footer_legal_title">Pravni dokumenti</h3>
       <p>
-        <a href="politika-zasebnosti.html">Politika zasebnosti</a><br>
-        <a href="gdpr.html">GDPR</a>
+        <a href="politika-zasebnosti.html" data-i18n="footer_privacy">Politika zasebnosti</a><br>
+        <a href="gdpr.html" data-i18n="footer_gdpr">GDPR</a>
       </p>
     </div>
     
     <div class="footer-col social-col">
-      <h3>Sledite nam</h3>
+      <h3 data-i18n="footer_follow">Sledite nam</h3>
       <a href="https://www.instagram.com/taplus.storitve/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
@@ -239,13 +270,177 @@
   
   <div class="footer-bottom">
     <div class="container">
-      <p>© 2026 TA+ | Vse pravice pridržane</p>
+      <p data-i18n="footer_rights">© 2026 TA+ | Vse pravice pridržane</p>
     </div>
   </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const i18n = {
+    sl: {
+      page_title: 'TA+ | Premium čiščenje Ljubljana',
+      meta_description: 'TA+ čiščenje in vzdrževanje - profesionalno čiščenje stanovanj, hiš in poslovnih prostorov v Ljubljani. Odziv v manj kot 1 uri.',
+      og_title: 'TA+ | Premium čiščenje Ljubljana',
+      og_description: 'Profesionalno čiščenje in vzdrževanje za stanovanja, hiše in poslovne prostore. Odziv v manj kot 1 uri.',
+      og_locale: 'sl_SI',
+      twitter_title: 'TA+ | Premium čiščenje Ljubljana',
+      twitter_description: 'Profesionalno čiščenje in vzdrževanje po vaši meri.',
+      nav_home: 'Domov',
+      nav_services: 'Storitve',
+      nav_contact: 'Kontakt',
+      call_us: 'Pokličite nas',
+      hero_title: 'Profesionalno čiščenje in hišniška dela',
+      hero_text: 'Stanovanja, hiše, poslovni prostori in vzdrževanje objektov',
+      hero_btn_services: 'Prikaži storitve',
+      hero_btn_contact: 'Pošlji povpraševanje',
+      services_title: 'Naše storitve',
+      service_1_title: 'Redno ali generalno čiščenje',
+      service_1_text: 'Stanovanja, hiše ali kratkoročne namestitve.',
+      service_2_title: 'Čiščenje poslovnih prostorov',
+      service_2_text: 'Urejeno in profesionalno delovno okolje.',
+      service_3_title: 'Manjša popravila ali vzdrževanje objektov',
+      service_3_text: 'Hišni mojster za male popravke in vzdrževanje.',
+      why_title: 'Zakaj izbrati TA+',
+      why_subtitle: 'Profesionalnost, ki presega pričakovanja',
+      why_1_title: 'Hiter odziv',
+      why_1_text: 'Odgovorimo na vaše povpraševanje v manj kot 1 uri in smo pripravljeni na delo takrat, ko vi potrebujete.',
+      why_2_title: 'Premium kakovost',
+      why_2_text: 'Uporabljamo preverjena čistila (ekološka*) pripomočke in opremo za odlične rezultate.',
+      why_2_note: '* Ekološka čistila na zahtevo stranke.',
+      why_3_title: 'Izkušen tim',
+      why_3_text: 'Naša ekipa je usposobljena, zanesljiva in predana zagotavljanju najboljše storitve.',
+      why_4_title: 'Zanesljivost',
+      why_4_text: 'Zaupanje strank je naša prioriteta. Delamo vestno, diskretno in zanesljivo.',
+      why_5_title: 'Pozornost do detajlov',
+      why_5_text: 'Vsak kotiček obravnavamo s posebno pozornostjo, da dosežemo popolnost.',
+      why_6_title: 'Fleksibilnost',
+      why_6_text: 'Prilagajamo se vašim potrebam in urniku. Redno ali enkratno čiščenje, izbira je vaša.',
+      trusted_title: 'Zaupajo nam',
+      footer_company_title: 'Podatki podjetja',
+      footer_company_text: '<strong>TA+, čiščenje in ostale storitve</strong><br>Tamara Meden s.p.<br>Gerbičeva ulica 5A<br>1380 Cerknica<br>Davčna številka: 54164168',
+      footer_contact_title: 'Kontaktni podatki',
+      footer_legal_title: 'Pravni dokumenti',
+      footer_privacy: 'Politika zasebnosti',
+      footer_gdpr: 'GDPR',
+      footer_follow: 'Sledite nam',
+      footer_rights: '© 2026 TA+ | Vse pravice pridržane'
+    },
+    en: {
+      page_title: 'TA+ | Premium Cleaning Ljubljana',
+      meta_description: 'TA+ cleaning and maintenance - professional cleaning for apartments, houses and business premises in Ljubljana. Response in less than 1 hour.',
+      og_title: 'TA+ | Premium Cleaning Ljubljana',
+      og_description: 'Professional cleaning and maintenance for apartments, houses and business premises. Response in less than 1 hour.',
+      og_locale: 'en_US',
+      twitter_title: 'TA+ | Premium Cleaning Ljubljana',
+      twitter_description: 'Professional cleaning and maintenance tailored to your needs.',
+      nav_home: 'Home',
+      nav_services: 'Services',
+      nav_contact: 'Contact',
+      call_us: 'Call us',
+      hero_title: 'Professional cleaning and maintenance services',
+      hero_text: 'Apartments, houses, business premises and property maintenance',
+      hero_btn_services: 'View services',
+      hero_btn_contact: 'Send inquiry',
+      services_title: 'Our services',
+      service_1_title: 'Regular or deep cleaning',
+      service_1_text: 'Apartments, houses or short-term rentals.',
+      service_2_title: 'Commercial cleaning',
+      service_2_text: 'Neat and professional work environment.',
+      service_3_title: 'Minor repairs and maintenance',
+      service_3_text: 'Handyman support for small repairs and upkeep.',
+      why_title: 'Why choose TA+',
+      why_subtitle: 'Professionalism that exceeds expectations',
+      why_1_title: 'Fast response',
+      why_1_text: 'We respond to your inquiry in under 1 hour and are ready when you need us.',
+      why_2_title: 'Premium quality',
+      why_2_text: 'We use proven cleaners (eco options*) tools and equipment for excellent results.',
+      why_2_note: '* Eco-friendly cleaning products available on request.',
+      why_3_title: 'Experienced team',
+      why_3_text: 'Our team is trained, reliable and dedicated to delivering top service.',
+      why_4_title: 'Reliability',
+      why_4_text: 'Client trust is our priority. We work carefully, discreetly and reliably.',
+      why_5_title: 'Attention to detail',
+      why_5_text: 'We treat every corner with special care to achieve perfection.',
+      why_6_title: 'Flexibility',
+      why_6_text: 'We adapt to your needs and schedule. Regular or one-time cleaning, your choice.',
+      trusted_title: 'Trusted by',
+      footer_company_title: 'Company information',
+      footer_company_text: '<strong>TA+, cleaning and other services</strong><br>Tamara Meden s.p.<br>Gerbičeva ulica 5A<br>1380 Cerknica<br>Tax number: 54164168',
+      footer_contact_title: 'Contact details',
+      footer_legal_title: 'Legal documents',
+      footer_privacy: 'Privacy policy',
+      footer_gdpr: 'GDPR',
+      footer_follow: 'Follow us',
+      footer_rights: '© 2026 TA+ | All rights reserved'
+    }
+  };
+
+  const langButtons = document.querySelectorAll('.lang-btn');
+
+  function setLanguage(lang) {
+    const selected = i18n[lang] ? lang : 'sl';
+    const translations = i18n[selected];
+
+    document.documentElement.lang = selected;
+    document.title = translations.page_title;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+
+    if (metaDescription && translations.meta_description) metaDescription.setAttribute('content', translations.meta_description);
+    if (ogTitle && translations.og_title) ogTitle.setAttribute('content', translations.og_title);
+    if (ogDescription && translations.og_description) ogDescription.setAttribute('content', translations.og_description);
+    if (ogLocale && translations.og_locale) ogLocale.setAttribute('content', translations.og_locale);
+    if (twitterTitle && translations.twitter_title) twitterTitle.setAttribute('content', translations.twitter_title);
+    if (twitterDescription && translations.twitter_description) twitterDescription.setAttribute('content', translations.twitter_description);
+
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      if (translations[key]) {
+        element.textContent = translations[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(element => {
+      const key = element.getAttribute('data-i18n-html');
+      if (translations[key]) {
+        element.innerHTML = translations[key];
+      }
+    });
+
+    langButtons.forEach(button => {
+      const isActive = button.dataset.lang === selected;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    localStorage.setItem('siteLanguage', selected);
+
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set('lang', selected);
+    window.history.replaceState({}, '', `${currentUrl.pathname}${currentUrl.search}${currentUrl.hash}`);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', `https://taplus.si/index.html?lang=${selected}`);
+    }
+  }
+
+  langButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      setLanguage(button.dataset.lang);
+    });
+  });
+
+  const languageFromUrl = new URLSearchParams(window.location.search).get('lang');
+  const savedLanguage = (languageFromUrl && i18n[languageFromUrl]) ? languageFromUrl : (localStorage.getItem('siteLanguage') || 'sl');
+  setLanguage(savedLanguage);
+
   // Hamburger menu toggle
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileNav = document.getElementById('mobile-nav');

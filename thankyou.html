@@ -11,6 +11,10 @@
 <meta property="og:locale" content="sl_SI">
 <meta property="og:site_name" content="TA+">
 <title>Hvala za povpraševanje | TA+ Čiščenje Ljubljana</title>
+<link rel="canonical" href="https://taplus.si/thankyou.html?lang=sl">
+<link rel="alternate" hreflang="sl" href="https://taplus.si/thankyou.html?lang=sl">
+<link rel="alternate" hreflang="en" href="https://taplus.si/thankyou.html?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://taplus.si/thankyou.html?lang=sl">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -29,10 +33,15 @@
 
     <!-- Desktop navigation -->
     <nav>
-      <a href="index.html">Domov</a>
-      <a href="storitve.html">Storitve</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" data-i18n="nav_home">Domov</a>
+      <a href="storitve.html" data-i18n="nav_services">Storitve</a>
+      <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
     </nav>
+
+    <div class="lang-switch" aria-label="Language switcher">
+      <button type="button" class="lang-btn active" data-lang="sl" aria-pressed="true">SL</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
 
     <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
       <span></span>
@@ -42,27 +51,27 @@
 
     <!-- Mobile navigation -->
     <nav id="mobile-nav">
-      <a href="index.html">Domov</a>
-      <a href="storitve.html">Storitve</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" data-i18n="nav_home">Domov</a>
+      <a href="storitve.html" data-i18n="nav_services">Storitve</a>
+      <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
     </nav>
 
-    <a class="btn-gold" href="tel:+38641222359">Pokličite nas</a>
+    <a class="btn-gold" href="tel:+38641222359" data-i18n="call_us">Pokličite nas</a>
   </div>
 </header>
 
 <section class="thank-you container">
-  <h1>✓ Hvala za oddano povpraševanje!</h1>
-  <p class="message">Prejeli smo vašo pošto in vas bomo kontaktirali v manj kot 1 uri.</p>
-  <p class="urgent">Imate nujno situacijo? – pokličite nas na <a href="tel:+38641222359">+386 41 222 359</a></p>
-  <a href="index.html" class="btn-gold">Nazaj na domačo stran</a>
+  <h1 data-i18n="thanks_title">✓ Hvala za oddano povpraševanje!</h1>
+  <p class="message" data-i18n="thanks_message">Prejeli smo vašo pošto in vas bomo kontaktirali v manj kot 1 uri.</p>
+  <p class="urgent" data-i18n-html="thanks_urgent">Imate nujno situacijo? – pokličite nas na <a href="tel:+38641222359">+386 41 222 359</a></p>
+  <a href="index.html" class="btn-gold" data-i18n="back_home">Nazaj na domačo stran</a>
 </section>
 
 <footer>
   <div class="container footer-content">
     <div class="footer-col">
-      <h3>Podatki podjetja</h3>
-      <p>
+      <h3 data-i18n="footer_company_title">Podatki podjetja</h3>
+      <p data-i18n-html="footer_company_text">
         <strong>TA+, čiščenje in ostale storitve</strong><br>
         Tamara Meden s.p.<br>
         Gerbičeva ulica 5A<br>
@@ -72,7 +81,7 @@
     </div>
     
     <div class="footer-col">
-      <h3>Kontaktni podatki</h3>
+      <h3 data-i18n="footer_contact_title">Kontaktni podatki</h3>
       <p>
         <i class="fas fa-phone"></i> <a href="tel:+38641222359">+386 41 222 359</a><br>
         <i class="fas fa-envelope"></i> <a href="mailto:info@taplus.si">info@taplus.si</a>
@@ -80,15 +89,15 @@
     </div>
 
     <div class="footer-col">
-      <h3>Pravni dokumenti</h3>
+      <h3 data-i18n="footer_legal_title">Pravni dokumenti</h3>
       <p>
-        <a href="politika-zasebnosti.html">Politika zasebnosti</a><br>
-        <a href="gdpr.html">GDPR</a>
+        <a href="politika-zasebnosti.html" data-i18n="footer_privacy">Politika zasebnosti</a><br>
+        <a href="gdpr.html" data-i18n="footer_gdpr">GDPR</a>
       </p>
     </div>
     
     <div class="footer-col social-col">
-      <h3>Sledite nam</h3>
+      <h3 data-i18n="footer_follow">Sledite nam</h3>
       <a href="https://www.instagram.com/taplus.storitve/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
@@ -97,14 +106,126 @@
   
   <div class="footer-bottom">
     <div class="container">
-      <p>© 2026 TA+ | Vse pravice pridržane</p>
+      <p data-i18n="footer_rights">© 2026 TA+ | Vse pravice pridržane</p>
     </div>
   </div>
 </footer>
 
 <script>
-// Hamburger menu toggle
 document.addEventListener('DOMContentLoaded', function() {
+  const i18n = {
+    sl: {
+      page_title: 'Hvala za povpraševanje | TA+ Čiščenje Ljubljana',
+      meta_description: 'Hvala vam za vaše povpraševanje. Kontaktirali vas bomo v najkrajšem času.',
+      og_title: 'Hvala za povpraševanje | TA+ Čiščenje Ljubljana',
+      og_description: 'Povpraševanje je uspešno oddano. Hvala za zaupanje.',
+      og_locale: 'sl_SI',
+      nav_home: 'Domov',
+      nav_services: 'Storitve',
+      nav_contact: 'Kontakt',
+      call_us: 'Pokličite nas',
+      thanks_title: '✓ Hvala za oddano povpraševanje!',
+      thanks_message: 'Prejeli smo vašo pošto in vas bomo kontaktirali v manj kot 1 uri.',
+      thanks_urgent: 'Imate nujno situacijo? – pokličite nas na <a href="tel:+38641222359">+386 41 222 359</a>',
+      back_home: 'Nazaj na domačo stran',
+      footer_company_title: 'Podatki podjetja',
+      footer_company_text: '<strong>TA+, čiščenje in ostale storitve</strong><br>Tamara Meden s.p.<br>Gerbičeva ulica 5A<br>1380 Cerknica<br>Davčna številka: 54164168',
+      footer_contact_title: 'Kontaktni podatki',
+      footer_legal_title: 'Pravni dokumenti',
+      footer_privacy: 'Politika zasebnosti',
+      footer_gdpr: 'GDPR',
+      footer_follow: 'Sledite nam',
+      footer_rights: '© 2026 TA+ | Vse pravice pridržane'
+    },
+    en: {
+      page_title: 'Thank You for Your Inquiry | TA+ Cleaning Ljubljana',
+      meta_description: 'Thank you for your inquiry. We will contact you as soon as possible.',
+      og_title: 'Thank You for Your Inquiry | TA+ Cleaning Ljubljana',
+      og_description: 'Your inquiry has been submitted successfully. Thank you for your trust.',
+      og_locale: 'en_US',
+      nav_home: 'Home',
+      nav_services: 'Services',
+      nav_contact: 'Contact',
+      call_us: 'Call us',
+      thanks_title: '✓ Thank you for your inquiry!',
+      thanks_message: 'We received your message and will contact you in less than 1 hour.',
+      thanks_urgent: 'Urgent situation? – call us at <a href="tel:+38641222359">+386 41 222 359</a>',
+      back_home: 'Back to home page',
+      footer_company_title: 'Company information',
+      footer_company_text: '<strong>TA+, cleaning and other services</strong><br>Tamara Meden s.p.<br>Gerbičeva ulica 5A<br>1380 Cerknica<br>Tax number: 54164168',
+      footer_contact_title: 'Contact details',
+      footer_legal_title: 'Legal documents',
+      footer_privacy: 'Privacy policy',
+      footer_gdpr: 'GDPR',
+      footer_follow: 'Follow us',
+      footer_rights: '© 2026 TA+ | All rights reserved'
+    }
+  };
+
+  const langButtons = document.querySelectorAll('.lang-btn');
+  let currentLanguage = 'sl';
+
+  function setLanguage(lang) {
+    const selected = i18n[lang] ? lang : 'sl';
+    const translations = i18n[selected];
+
+    currentLanguage = selected;
+    document.documentElement.lang = selected;
+    document.title = translations.page_title;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+
+    if (metaDescription && translations.meta_description) metaDescription.setAttribute('content', translations.meta_description);
+    if (ogTitle && translations.og_title) ogTitle.setAttribute('content', translations.og_title);
+    if (ogDescription && translations.og_description) ogDescription.setAttribute('content', translations.og_description);
+    if (ogLocale && translations.og_locale) ogLocale.setAttribute('content', translations.og_locale);
+
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      if (translations[key]) {
+        element.textContent = translations[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(element => {
+      const key = element.getAttribute('data-i18n-html');
+      if (translations[key]) {
+        element.innerHTML = translations[key];
+      }
+    });
+
+    langButtons.forEach(button => {
+      const isActive = button.dataset.lang === selected;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    localStorage.setItem('siteLanguage', selected);
+
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set('lang', selected);
+    window.history.replaceState({}, '', `${currentUrl.pathname}${currentUrl.search}${currentUrl.hash}`);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', `https://taplus.si/thankyou.html?lang=${selected}`);
+    }
+  }
+
+  langButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      setLanguage(button.dataset.lang);
+    });
+  });
+
+  const languageFromUrl = new URLSearchParams(window.location.search).get('lang');
+  const savedLanguage = (languageFromUrl && i18n[languageFromUrl]) ? languageFromUrl : (localStorage.getItem('siteLanguage') || 'sl');
+  setLanguage(savedLanguage);
+
+  // Hamburger menu toggle
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileNav = document.getElementById('mobile-nav');
   
@@ -125,11 +246,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// no Netlify-specific redirection needed when using Formspree – user lands here directly
-// optionally a timer could send them back to home after a few seconds
-
 setTimeout(function() {
-  window.location.href = '/index.html';
+  window.location.href = `/index.html?lang=${currentLanguage}`;
 }, 8000);
 </script>
 

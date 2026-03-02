@@ -11,6 +11,10 @@
 <meta property="og:locale" content="sl_SI">
 <meta property="og:site_name" content="TA+">
 <title>Politika zasebnosti | TA+ Čiščenje Ljubljana</title>
+<link rel="canonical" href="https://taplus.si/politika-zasebnosti.html?lang=sl">
+<link rel="alternate" hreflang="sl" href="https://taplus.si/politika-zasebnosti.html?lang=sl">
+<link rel="alternate" hreflang="en" href="https://taplus.si/politika-zasebnosti.html?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://taplus.si/politika-zasebnosti.html?lang=sl">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -28,10 +32,15 @@
     </a>
 
     <nav>
-      <a href="index.html">Domov</a>
-      <a href="storitve.html">Storitve</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" data-i18n="nav_home">Domov</a>
+      <a href="storitve.html" data-i18n="nav_services">Storitve</a>
+      <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
     </nav>
+
+    <div class="lang-switch" aria-label="Language switcher">
+      <button type="button" class="lang-btn active" data-lang="sl" aria-pressed="true">SL</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
 
     <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
       <span></span>
@@ -40,17 +49,18 @@
     </button>
 
     <nav id="mobile-nav">
-      <a href="index.html">Domov</a>
-      <a href="storitve.html">Storitve</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" data-i18n="nav_home">Domov</a>
+      <a href="storitve.html" data-i18n="nav_services">Storitve</a>
+      <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
     </nav>
 
-    <a class="btn-gold" href="tel:+38641222359">Pokličite nas</a>
+    <a class="btn-gold" href="tel:+38641222359" data-i18n="call_us">Pokličite nas</a>
   </div>
 </header>
 
 <section class="legal-page">
   <div class="container legal-card">
+    <div data-i18n-html="legal_content">
     <h1>Politika zasebnosti</h1>
     <p class="legal-meta">Velja od: 1. marec 2026</p>
 
@@ -125,14 +135,15 @@
     <p>
       Politiko zasebnosti lahko občasno posodobimo. Aktualna različica je vedno objavljena na tej strani.
     </p>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="container footer-content">
     <div class="footer-col">
-      <h3>Podatki podjetja</h3>
-      <p>
+      <h3 data-i18n="footer_company_title">Podatki podjetja</h3>
+      <p data-i18n-html="footer_company_text">
         <strong>TA+, čiščenje in ostale storitve</strong><br>
         Tamara Meden s.p.<br>
         Gerbičeva ulica 5A<br>
@@ -142,7 +153,7 @@
     </div>
     
     <div class="footer-col">
-      <h3>Kontaktni podatki</h3>
+      <h3 data-i18n="footer_contact_title">Kontaktni podatki</h3>
       <p>
         <i class="fas fa-phone"></i> <a href="tel:+38641222359">+386 41 222 359</a><br>
         <i class="fas fa-envelope"></i> <a href="mailto:info@taplus.si">info@taplus.si</a>
@@ -150,15 +161,15 @@
     </div>
 
     <div class="footer-col">
-      <h3>Pravni dokumenti</h3>
+      <h3 data-i18n="footer_legal_title">Pravni dokumenti</h3>
       <p>
-        <a href="politika-zasebnosti.html">Politika zasebnosti</a><br>
-        <a href="gdpr.html">GDPR</a>
+        <a href="politika-zasebnosti.html" data-i18n="footer_privacy">Politika zasebnosti</a><br>
+        <a href="gdpr.html" data-i18n="footer_gdpr">GDPR</a>
       </p>
     </div>
     
     <div class="footer-col social-col">
-      <h3>Sledite nam</h3>
+      <h3 data-i18n="footer_follow">Sledite nam</h3>
       <a href="https://www.instagram.com/taplus.storitve/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
@@ -167,13 +178,117 @@
   
   <div class="footer-bottom">
     <div class="container">
-      <p>© 2026 TA+ | Vse pravice pridržane</p>
+      <p data-i18n="footer_rights">© 2026 TA+ | Vse pravice pridržane</p>
     </div>
   </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const i18n = {
+    sl: {
+      page_title: 'Politika zasebnosti | TA+ Čiščenje Ljubljana',
+      meta_description: 'Politika zasebnosti podjetja TA+.',
+      og_title: 'Politika zasebnosti | TA+ Čiščenje Ljubljana',
+      og_description: 'Informacije o obdelavi osebnih podatkov in zasebnosti pri uporabi strani TA+.',
+      og_locale: 'sl_SI',
+      nav_home: 'Domov',
+      nav_services: 'Storitve',
+      nav_contact: 'Kontakt',
+      call_us: 'Pokličite nas',
+      legal_content: '<h1>Politika zasebnosti</h1><p class="legal-meta">Velja od: 1. marec 2026</p><h2>1. Upravljavec osebnih podatkov</h2><p>Upravljavec osebnih podatkov je TA+, čiščenje in ostale storitve, Tamara Meden s.p., Gerbičeva ulica 5A, 1380 Cerknica, davčna številka 54164168. Za vsa vprašanja glede zasebnosti nas lahko kontaktirate na <a href="mailto:info@taplus.si">info@taplus.si</a> ali na <a href="tel:+38641222359">+386 41 222 359</a>.</p><h2>2. Katere podatke zbiramo</h2><p>Preko obrazca za povpraševanje lahko zbiramo naslednje podatke:</p><ul><li>ime in priimek,</li><li>e-poštni naslov,</li><li>telefonsko številko,</li><li>izbrano storitev, želeni datum in uro,</li><li>vsebino sporočila, ki nam jo prostovoljno posredujete.</li></ul><h2>3. Namen in pravna podlaga obdelave</h2><p>Vaše podatke obdelujemo za:</p><ul><li>odgovor na vaše povpraševanje in pripravo ponudbe,</li><li>dogovor in izvedbo storitev,</li><li>komunikacijo v zvezi z naročenimi storitvami.</li></ul><p>Pravna podlaga je izvajanje ukrepov na vašo zahtevo pred sklenitvijo pogodbe in/ali izvajanje pogodbe (člen 6(1)(b) GDPR), ter naš zakoniti interes za učinkovito komunikacijo s strankami (člen 6(1)(f) GDPR).</p><h2>4. Obdelovalci in posredovanje podatkov</h2><p>Za sprejem in obdelavo sporočil iz kontaktnega obrazca uporabljamo storitev Formspree. To pomeni, da se podatki iz obrazca ob oddaji posredujejo tudi temu ponudniku kot pogodbenemu obdelovalcu. Podatkov ne prodajamo in jih ne posredujemo nepovezanim tretjim osebam, razen če je to potrebno za izpolnitev zakonskih obveznosti.</p><h2>5. Hramba podatkov</h2><p>Podatke iz povpraševanj hranimo toliko časa, kolikor je potrebno za komunikacijo, pripravo ponudbe in izvedbo storitve, oziroma do izpolnitve namena obdelave. Podatke, povezane z izstavljenimi računi, hranimo v skladu z veljavno davčno in računovodsko zakonodajo.</p><h2>6. Piškotki in tehnični podatki</h2><p>Spletna stran trenutno ne uporablja lastnih analitičnih ali oglaševalskih piškotkov. Ob obisku lahko ponudniki gostovanja in tehničnih storitev zaradi delovanja in varnosti obdelujejo osnovne tehnične podatke (npr. IP naslov, datum in čas dostopa, podatki o brskalniku).</p><h2>7. Vaše pravice</h2><p>V zvezi z vašimi osebnimi podatki imate pravico do:</p><ul><li>dostopa do podatkov,</li><li>popravka netočnih podatkov,</li><li>izbrisa podatkov (v zakonsko dopustnih primerih),</li><li>omejitve obdelave,</li><li>ugovora obdelavi,</li><li>prenosljivosti podatkov.</li></ul><p>Zahtevo lahko pošljete na <a href="mailto:info@taplus.si">info@taplus.si</a>. Če menite, da obdelava ni zakonita, imate pravico vložiti pritožbo pri Informacijskem pooblaščencu Republike Slovenije.</p><h2>8. Spremembe politike zasebnosti</h2><p>Politiko zasebnosti lahko občasno posodobimo. Aktualna različica je vedno objavljena na tej strani.</p>',
+      footer_company_title: 'Podatki podjetja',
+      footer_company_text: '<strong>TA+, čiščenje in ostale storitve</strong><br>Tamara Meden s.p.<br>Gerbičeva ulica 5A<br>1380 Cerknica<br>Davčna številka: 54164168',
+      footer_contact_title: 'Kontaktni podatki',
+      footer_legal_title: 'Pravni dokumenti',
+      footer_privacy: 'Politika zasebnosti',
+      footer_gdpr: 'GDPR',
+      footer_follow: 'Sledite nam',
+      footer_rights: '© 2026 TA+ | Vse pravice pridržane'
+    },
+    en: {
+      page_title: 'Privacy Policy | TA+ Cleaning Ljubljana',
+      meta_description: 'Privacy policy of TA+ company.',
+      og_title: 'Privacy Policy | TA+ Cleaning Ljubljana',
+      og_description: 'Information about personal data processing and privacy when using the TA+ website.',
+      og_locale: 'en_US',
+      nav_home: 'Home',
+      nav_services: 'Services',
+      nav_contact: 'Contact',
+      call_us: 'Call us',
+      legal_content: '<h1>Privacy Policy</h1><p class="legal-meta">Effective from: 1 March 2026</p><h2>1. Data controller</h2><p>The data controller is TA+, cleaning and other services, Tamara Meden s.p., Gerbičeva ulica 5A, 1380 Cerknica, tax number 54164168. For any privacy related questions, contact us at <a href="mailto:info@taplus.si">info@taplus.si</a> or <a href="tel:+38641222359">+386 41 222 359</a>.</p><h2>2. What data we collect</h2><p>Through the inquiry form, we may collect the following data:</p><ul><li>full name,</li><li>email address,</li><li>phone number,</li><li>selected service, preferred date and time,</li><li>message content you provide voluntarily.</li></ul><h2>3. Purpose and legal basis of processing</h2><p>We process your data for:</p><ul><li>responding to your inquiry and preparing an offer,</li><li>arranging and delivering services,</li><li>communication related to ordered services.</li></ul><p>The legal basis is taking steps at your request prior to entering into a contract and or performance of a contract (Article 6(1)(b) GDPR), and our legitimate interest in efficient communication with clients (Article 6(1)(f) GDPR).</p><h2>4. Processors and data sharing</h2><p>We use Formspree to receive and process messages from the contact form. This means form data is also sent to that provider as a contractual processor. We do not sell data and do not share it with unrelated third parties unless required by law.</p><h2>5. Data retention</h2><p>Inquiry data is stored as long as necessary for communication, offer preparation and service delivery, or until the processing purpose is fulfilled. Data related to issued invoices is stored in accordance with applicable tax and accounting regulations.</p><h2>6. Cookies and technical data</h2><p>The website currently does not use its own analytics or advertising cookies. During visits, hosting and technical providers may process basic technical data (for example IP address, date and time of access, browser data) for operation and security.</p><h2>7. Your rights</h2><p>In relation to your personal data, you have the right to:</p><ul><li>access data,</li><li>rectify inaccurate data,</li><li>erase data where legally permitted,</li><li>restrict processing,</li><li>object to processing,</li><li>data portability.</li></ul><p>You can send your request to <a href="mailto:info@taplus.si">info@taplus.si</a>. If you believe processing is not lawful, you have the right to file a complaint with the Information Commissioner of the Republic of Slovenia.</p><h2>8. Changes to this policy</h2><p>We may occasionally update this privacy policy. The current version is always published on this page.</p>',
+      footer_company_title: 'Company information',
+      footer_company_text: '<strong>TA+, cleaning and other services</strong><br>Tamara Meden s.p.<br>Gerbičeva ulica 5A<br>1380 Cerknica<br>Tax number: 54164168',
+      footer_contact_title: 'Contact details',
+      footer_legal_title: 'Legal documents',
+      footer_privacy: 'Privacy policy',
+      footer_gdpr: 'GDPR',
+      footer_follow: 'Follow us',
+      footer_rights: '© 2026 TA+ | All rights reserved'
+    }
+  };
+
+  const langButtons = document.querySelectorAll('.lang-btn');
+
+  function setLanguage(lang) {
+    const selected = i18n[lang] ? lang : 'sl';
+    const translations = i18n[selected];
+
+    document.documentElement.lang = selected;
+    document.title = translations.page_title;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+
+    if (metaDescription && translations.meta_description) metaDescription.setAttribute('content', translations.meta_description);
+    if (ogTitle && translations.og_title) ogTitle.setAttribute('content', translations.og_title);
+    if (ogDescription && translations.og_description) ogDescription.setAttribute('content', translations.og_description);
+    if (ogLocale && translations.og_locale) ogLocale.setAttribute('content', translations.og_locale);
+
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      if (translations[key]) {
+        element.textContent = translations[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(element => {
+      const key = element.getAttribute('data-i18n-html');
+      if (translations[key]) {
+        element.innerHTML = translations[key];
+      }
+    });
+
+    langButtons.forEach(button => {
+      const isActive = button.dataset.lang === selected;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    localStorage.setItem('siteLanguage', selected);
+
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set('lang', selected);
+    window.history.replaceState({}, '', `${currentUrl.pathname}${currentUrl.search}${currentUrl.hash}`);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', `https://taplus.si/politika-zasebnosti.html?lang=${selected}`);
+    }
+  }
+
+  langButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      setLanguage(button.dataset.lang);
+    });
+  });
+
+  const languageFromUrl = new URLSearchParams(window.location.search).get('lang');
+  const savedLanguage = (languageFromUrl && i18n[languageFromUrl]) ? languageFromUrl : (localStorage.getItem('siteLanguage') || 'sl');
+  setLanguage(savedLanguage);
+
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileNav = document.getElementById('mobile-nav');
   

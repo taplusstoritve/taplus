@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const languageFromUrl = new URLSearchParams(window.location.search).get('lang');
+  const language = (languageFromUrl && ['sl', 'en'].includes(languageFromUrl)) ? languageFromUrl : (localStorage.getItem('siteLanguage') || 'sl');
+  const t = {
+    sl: {
+      message: 'Ta spletna stran uporablja nujne piškotke za osnovno delovanje strani.',
+      privacy: 'Politika zasebnosti',
+      gdpr: 'GDPR',
+      dismiss: 'Zapri',
+      accept: 'Razumem'
+    },
+    en: {
+      message: 'This website uses essential cookies for basic site functionality.',
+      privacy: 'Privacy policy',
+      gdpr: 'GDPR',
+      dismiss: 'Close',
+      accept: 'I understand'
+    }
+  };
+  const copy = t[language] || t.sl;
+
   const consentKey = 'ta_cookie_notice_accepted';
   const dismissedUntilKey = 'ta_cookie_notice_dismissed_until';
   const hasAccepted = localStorage.getItem(consentKey) === 'yes';
@@ -16,13 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
   banner.innerHTML = `
     <div class="cookie-banner__content">
       <p>
-        Ta spletna stran uporablja nujne piškotke za osnovno delovanje strani.
+        ${copy.message}
       </p>
       <div class="cookie-banner__actions">
-        <a href="politika-zasebnosti.html" class="cookie-banner__more">Politika zasebnosti</a>
-        <a href="gdpr.html" class="cookie-banner__more">GDPR</a>
-        <button type="button" class="cookie-banner__dismiss">Zapri</button>
-        <button type="button" class="btn-gold cookie-banner__btn">Razumem</button>
+        <a href="politika-zasebnosti.html?lang=${language}" class="cookie-banner__more">${copy.privacy}</a>
+        <a href="gdpr.html?lang=${language}" class="cookie-banner__more">${copy.gdpr}</a>
+        <button type="button" class="cookie-banner__dismiss">${copy.dismiss}</button>
+        <button type="button" class="btn-gold cookie-banner__btn">${copy.accept}</button>
       </div>
     </div>
   `;

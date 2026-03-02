@@ -14,12 +14,41 @@
 <meta name="twitter:title" content="Storitve | TA+ Čiščenje Ljubljana">
 <meta name="twitter:description" content="Redno in generalno čiščenje ter vzdrževanje objektov po meri.">
 <title>Storitve | TA+ Čiščenje Ljubljana</title>
+<link rel="canonical" href="https://taplus.si/storitve.html?lang=sl">
+<link rel="alternate" hreflang="sl" href="https://taplus.si/storitve.html?lang=sl">
+<link rel="alternate" hreflang="en" href="https://taplus.si/storitve.html?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://taplus.si/storitve.html?lang=sl">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Cleaning and maintenance services",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "TA+",
+    "telephone": "+38641222359",
+    "url": "https://taplus.si/storitve.html"
+  },
+  "areaServed": "Ljubljana",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "TA+ Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Regular cleaning"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Deep cleaning"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial cleaning"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Minor repairs and maintenance"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Short-term rental cleaning"}}
+    ]
+  }
+}
+</script>
 </head>
 
 <body class="lux">
@@ -32,10 +61,15 @@
 
     <!-- Desktop navigation -->
     <nav>
-      <a href="index.html">Domov</a>
-      <a href="storitve.html">Storitve</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" data-i18n="nav_home">Domov</a>
+      <a href="storitve.html" data-i18n="nav_services">Storitve</a>
+      <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
     </nav>
+
+    <div class="lang-switch" aria-label="Language switcher">
+      <button type="button" class="lang-btn active" data-lang="sl" aria-pressed="true">SL</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
 
     <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" title="Odpri navigacijo">
       <span></span>
@@ -45,23 +79,23 @@
 
     <!-- Mobile navigation -->
     <nav id="mobile-nav">
-      <a href="index.html">Domov</a>
-      <a href="storitve.html">Storitve</a>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="index.html" data-i18n="nav_home">Domov</a>
+      <a href="storitve.html" data-i18n="nav_services">Storitve</a>
+      <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
     </nav>
 
-    <a class="btn-gold" href="tel:+38641222359">Pokličite nas</a>
+    <a class="btn-gold" href="tel:+38641222359" data-i18n="call_us">Pokličite nas</a>
   </div>
 </header>
 
 <section class="services services-page container">
-<h1 class="services-page-title">Naše premium storitve</h1>
+<h1 class="services-page-title" data-i18n="services_page_title">Naše premium storitve</h1>
 
 <div class="service-grid">
     <div class="card" id="redno">
         <img src="images/redno.jpg" alt="Redno čiščenje" loading="lazy" decoding="async">
-        <div class="card-content">
-            <h3>Redno čiščenje stanovanj ali hiš</h3>
+      <div class="card-content" data-i18n-html="service_1_content">
+            <h3 data-i18n="service_1_title">Redno čiščenje stanovanj ali hiš</h3>
             <p><strong>Vključuje:</strong></p>
             <ul class="service-list">
               <li><strong>Prah in površine:</strong><br>Brisanje prahu z vseh dostopnih površin, pohištva in polic.</li>
@@ -74,8 +108,8 @@
 
     <div class="card" id="generalno">
         <img src="images/generalno.jpg" alt="Generalno čiščenje" loading="lazy" decoding="async">
-        <div class="card-content">
-            <h3>Generalno čiščenje</h3>
+      <div class="card-content" data-i18n-html="service_2_content">
+            <h3 data-i18n="service_2_title">Generalno čiščenje</h3>
             <p><strong>Vključuje:</strong></p>
             <ul class="service-list">
               <li><strong>Okna in steklene površine:</strong><br>Temeljito čiščenje oken (notranjost in zunanjost), čiščenje okenskih okvirjev, polic in senčil (rolete, žaluzije) *doplačilo.</li>
@@ -97,8 +131,8 @@
 
     <div class="card" id="poslovno">
         <img src="images/poslovni prostori.jpg" alt="Čiščenje poslovnih prostorov" loading="lazy" decoding="async">
-        <div class="card-content">
-            <h3>Čiščenje poslovnih prostorov</h3>
+      <div class="card-content" data-i18n-html="service_3_content">
+            <h3 data-i18n="service_3_title">Čiščenje poslovnih prostorov</h3>
             <p><strong>Storitev vključuje:</strong></p>
             <ul class="service-list">
               <li><strong>Pisarniške površine:</strong><br>Čiščenje miz, računalniške opreme (prah), omar in sejnih sob.</li>
@@ -112,8 +146,8 @@
 
     <div class="card" id="popravila">
         <img src="images/popravila.jpg" alt="Manjša popravila" loading="lazy" decoding="async">
-        <div class="card-content">
-            <h3>Manjša popravila ali vzdrževanje objektov</h3>
+      <div class="card-content" data-i18n-html="service_4_content">
+            <h3 data-i18n="service_4_title">Manjša popravila ali vzdrževanje objektov</h3>
             <p><strong>Storitev vključuje:</strong></p>
             <ul class="service-list">
               <li><strong>Splošna popravila:</strong><br>Menjava žarnic, montaža polic, slik ali karnis.</li>
@@ -125,8 +159,8 @@
 
     <div class="card">
         <img src="images/namestitev.jpg" alt="Kratkoročne namestitve" loading="lazy" decoding="async">
-        <div class="card-content">
-            <h3>Čiščenje kratkoročnih namestitev (Airbnb / Booking)</h3>
+      <div class="card-content" data-i18n-html="service_5_content">
+            <h3 data-i18n="service_5_title">Čiščenje kratkoročnih namestitev (Airbnb / Booking)</h3>
             <p><strong>Storitev zajema:</strong></p>
             <ul class="service-list">
               <li><strong>Hitro in temeljito čiščenje:</strong><br>Priprava prostora za nove goste v kratkem času.</li>
@@ -143,18 +177,18 @@
 
 <!-- BEFORE AFTER -->
 <section class="before-after container">
-  <h2>Rezultati govorijo sami zase</h2>
+  <h2 data-i18n="before_after_title">Rezultati govorijo sami zase</h2>
 
   <div class="ba-wrapper">
 
     <div class="ba-box ba-small">
       <img src="images/before.jpg" alt="Pred čiščenjem" loading="lazy" decoding="async">
-      <div class="ba-label">PREJ</div>
+      <div class="ba-label" data-i18n="before_label">PREJ</div>
     </div>
 
     <div class="ba-box ba-small">
       <img src="images/after.jpg" alt="Po čiščenju" loading="lazy" decoding="async">
-      <div class="ba-label after">POTEM</div>
+      <div class="ba-label after" data-i18n="after_label">POTEM</div>
     </div>
 
   </div>
@@ -163,8 +197,8 @@
 <footer>
   <div class="container footer-content">
     <div class="footer-col">
-      <h3>Podatki podjetja</h3>
-      <p>
+      <h3 data-i18n="footer_company_title">Podatki podjetja</h3>
+      <p data-i18n-html="footer_company_text">
         <strong>TA+, čiščenje in ostale storitve</strong><br>
         Tamara Meden s.p.<br>
         Gerbičeva ulica 5A<br>
@@ -174,7 +208,7 @@
     </div>
     
     <div class="footer-col">
-      <h3>Kontaktni podatki</h3>
+      <h3 data-i18n="footer_contact_title">Kontaktni podatki</h3>
       <p>
         <i class="fas fa-phone"></i> <a href="tel:+38641222359">+386 41 222 359</a><br>
         <i class="fas fa-envelope"></i> <a href="mailto:info@taplus.si">info@taplus.si</a>
@@ -182,15 +216,15 @@
     </div>
 
     <div class="footer-col">
-      <h3>Pravni dokumenti</h3>
+      <h3 data-i18n="footer_legal_title">Pravni dokumenti</h3>
       <p>
-        <a href="politika-zasebnosti.html">Politika zasebnosti</a><br>
-        <a href="gdpr.html">GDPR</a>
+        <a href="politika-zasebnosti.html" data-i18n="footer_privacy">Politika zasebnosti</a><br>
+        <a href="gdpr.html" data-i18n="footer_gdpr">GDPR</a>
       </p>
     </div>
     
     <div class="footer-col social-col">
-      <h3>Sledite nam</h3>
+      <h3 data-i18n="footer_follow">Sledite nam</h3>
       <a href="https://www.instagram.com/taplus.storitve/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
@@ -199,13 +233,191 @@
   
   <div class="footer-bottom">
     <div class="container">
-      <p>© 2026 TA+ | Vse pravice pridržane</p>
+      <p data-i18n="footer_rights">© 2026 TA+ | Vse pravice pridržane</p>
     </div>
   </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const i18n = {
+    sl: {
+      page_title: 'Storitve | TA+ Čiščenje Ljubljana',
+      meta_description: 'Storitve čiščenja: redno čiščenje, generalno čiščenje, poslovni prostori in manjša popravila v Ljubljani.',
+      og_title: 'Storitve | TA+ Čiščenje Ljubljana',
+      og_description: 'Preglejte storitve TA+: redno in generalno čiščenje, poslovni prostori ter vzdrževanje objektov.',
+      og_locale: 'sl_SI',
+      twitter_title: 'Storitve | TA+ Čiščenje Ljubljana',
+      twitter_description: 'Redno in generalno čiščenje ter vzdrževanje objektov po meri.',
+      nav_home: 'Domov',
+      nav_services: 'Storitve',
+      nav_contact: 'Kontakt',
+      call_us: 'Pokličite nas',
+      services_page_title: 'Naše premium storitve',
+      service_1_title: 'Redno čiščenje stanovanj ali hiš',
+      service_1_content: '<h3>Redno čiščenje stanovanj ali hiš</h3><p><strong>Vključuje:</strong></p><ul class="service-list"><li><strong>Prah in površine:</strong><br>Brisanje prahu z vseh dostopnih površin, pohištva in polic.</li><li><strong>Tla:</strong><br>Sesanje vseh talnih površin in mokro brisanje (pomivanje).</li><li><strong>Kuhinja:</strong><br>Čiščenje pultov, zunanjosti kuhinjskih aparatov, pomivalnega korita in zunanjih front elementov.</li><li><strong>Kopalnica:</strong><br>Temeljito čiščenje sanitarij, tuš kabine ali kadi, umivalnika in ogledal.</li></ul>',
+      service_2_title: 'Generalno čiščenje',
+      service_2_content: '<h3>Generalno čiščenje</h3><p><strong>Vključuje:</strong></p><ul class="service-list"><li><strong>Okna in steklene površine:</strong><br>Temeljito čiščenje oken (notranjost in zunanjost), čiščenje okenskih okvirjev, polic in senčil (rolete, žaluzije) *doplačilo.</li><li><strong>Kuhinja do potankosti:</strong><br>Čiščenje notranjosti kuhinjskih elementov, globinsko čiščenje pečice, nape (brez odmaščevanja filtrov) in hladilnika.</li><li><strong>Kopalnica brez vodnega kamna:</strong><br>Odstranjevanje trdovratnega vodnega kamna s ploščic, fug, armatur in tuš kabin ter čiščenje sanitarij.</li><li><strong>Pohištvo in oblazinjenje:</strong><br>Čiščenje notranjosti omar, brisanje prahu z vrha visokih elementov, sesanje oblazinjenega pohištva in čiščenje radiatorjev.</li><li><strong>Vrata in podboji:</strong><br>Čiščenje vseh notranjih vrat, podbojev, kljuk in odstranjevanje prstnih odtisov okoli stikal.</li><li><strong>Tla in koti:</strong><br>Temeljito sesanje in mokro čiščenje vseh talnih površin, vključno z brisanjem kotnih letev (obrob), kjer se najraje nabira prah.</li></ul><p class="service-subtitle"><strong>Kdaj se odločiti za generalno čiščenje?</strong></p><ul class="service-list"><li>Ob vselitvi v nov dom ali izselitvi iz starega.</li><li>Po opravljenih gradbenih delih ali beljenju (odstranjevanje finega prahu).</li><li>Dvakrat letno kot temeljito "osvežitev" bivalnega prostora.</li><li>Pred prodajo ali oddajo nepremičnine za boljši prvi vtis.</li></ul>',
+      service_3_title: 'Čiščenje poslovnih prostorov',
+      service_3_content: '<h3>Čiščenje poslovnih prostorov</h3><p><strong>Storitev vključuje:</strong></p><ul class="service-list"><li><strong>Pisarniške površine:</strong><br>Čiščenje miz, računalniške opreme (prah), omar in sejnih sob.</li><li><strong>Skupni prostori:</strong><br>Čiščenje čajnih kuhinj, garderob in hodnikov.</li><li><strong>Sanitarije:</strong><br>Redno dnevno čiščenje toaletnih prostorov.</li><li><strong>Tla:</strong><br>Sesanje preprog in pomivanje trdih talnih površin.</li><li><strong>Odpadki:</strong><br>Redno praznjenje košev in ločevanje odpadkov.</li></ul>',
+      service_4_title: 'Manjša popravila ali vzdrževanje objektov',
+      service_4_content: '<h3>Manjša popravila ali vzdrževanje objektov</h3><p><strong>Storitev vključuje:</strong></p><ul class="service-list"><li><strong>Splošna popravila:</strong><br>Menjava žarnic, montaža polic, slik ali karnis.</li><li><strong>Električarska dela:</strong><br>Menjava vtičnic, stikal ali montaža svetil.</li><li><strong>Zunanje vzdrževanje:</strong><br>Čiščenje žlebov, urejanje okolice ali visokotlačno čiščenje teras.</li></ul>',
+      service_5_title: 'Čiščenje kratkoročnih namestitev (Airbnb / Booking)',
+      service_5_content: '<h3>Čiščenje kratkoročnih namestitev (Airbnb / Booking)</h3><p><strong>Storitev zajema:</strong></p><ul class="service-list"><li><strong>Hitro in temeljito čiščenje:</strong><br>Priprava prostora za nove goste v kratkem času.</li><li><strong>Menjava posteljnine in brisač:</strong><br>Odvoz umazanega perila in priprava svežih setov.</li><li><strong>Dopolnjevanje zalog:</strong><br>Preverjanje in dopolnjevanje toaletnega papirja, mil, kave, čaja in drugih potrošnih materialov.</li><li><strong>Kontrolni pregled:</strong><br>Preverjanje morebitne škode po odhodu gostov in poročanje lastniku.</li><li><strong>Osvežitev prostora:</strong><br>Prezračevanje in zagotavljanje prijetnega vonja v prostorih.</li></ul>',
+      before_after_title: 'Rezultati govorijo sami zase',
+      before_label: 'PREJ',
+      after_label: 'POTEM',
+      footer_company_title: 'Podatki podjetja',
+      footer_company_text: '<strong>TA+, čiščenje in ostale storitve</strong><br>Tamara Meden s.p.<br>Gerbičeva ulica 5A<br>1380 Cerknica<br>Davčna številka: 54164168',
+      footer_contact_title: 'Kontaktni podatki',
+      footer_legal_title: 'Pravni dokumenti',
+      footer_privacy: 'Politika zasebnosti',
+      footer_gdpr: 'GDPR',
+      footer_follow: 'Sledite nam',
+      footer_rights: '© 2026 TA+ | Vse pravice pridržane',
+      toggle_more: 'Prikaži več',
+      toggle_less: 'Prikaži manj'
+    },
+    en: {
+      page_title: 'Services | TA+ Cleaning Ljubljana',
+      meta_description: 'Cleaning services: regular cleaning, deep cleaning, commercial spaces and minor repairs in Ljubljana.',
+      og_title: 'Services | TA+ Cleaning Ljubljana',
+      og_description: 'Explore TA+ services: regular and deep cleaning, commercial spaces and property maintenance.',
+      og_locale: 'en_US',
+      twitter_title: 'Services | TA+ Cleaning Ljubljana',
+      twitter_description: 'Regular and deep cleaning with tailored maintenance services.',
+      nav_home: 'Home',
+      nav_services: 'Services',
+      nav_contact: 'Contact',
+      call_us: 'Call us',
+      services_page_title: 'Our premium services',
+      service_1_title: 'Regular apartment or house cleaning',
+      service_1_content: '<h3>Regular apartment or house cleaning</h3><p><strong>Includes:</strong></p><ul class="service-list"><li><strong>Dust and surfaces:</strong><br>Dusting all reachable surfaces, furniture and shelves.</li><li><strong>Floors:</strong><br>Vacuuming all floor areas and wet mopping.</li><li><strong>Kitchen:</strong><br>Cleaning countertops, exterior appliance surfaces, sink, and cabinet fronts.</li><li><strong>Bathroom:</strong><br>Thorough cleaning of sanitary areas, shower or bathtub, sink and mirrors.</li></ul>',
+      service_2_title: 'Deep cleaning',
+      service_2_content: '<h3>Deep cleaning</h3><p><strong>Includes:</strong></p><ul class="service-list"><li><strong>Windows and glass surfaces:</strong><br>Thorough window cleaning (inside and outside), cleaning window frames, sills and shades (rollers, blinds) *extra charge.</li><li><strong>Kitchen in detail:</strong><br>Cleaning inside kitchen cabinets, deep cleaning of oven, hood (without filter degreasing) and refrigerator.</li><li><strong>Limescale free bathroom:</strong><br>Removing stubborn limescale from tiles, grout, fixtures and shower cabins plus sanitary cleaning.</li><li><strong>Furniture and upholstery:</strong><br>Cleaning cabinet interiors, dusting high surfaces, vacuuming upholstered furniture and cleaning radiators.</li><li><strong>Doors and frames:</strong><br>Cleaning all interior doors, door frames, handles and removing fingerprints around switches.</li><li><strong>Floors and corners:</strong><br>Thorough vacuuming and wet cleaning of all floor surfaces, including baseboards where dust gathers most.</li></ul><p class="service-subtitle"><strong>When to choose deep cleaning?</strong></p><ul class="service-list"><li>When moving into a new home or moving out of your old one.</li><li>After renovation work or painting (removal of fine dust).</li><li>Twice a year as a complete refresh of your living space.</li><li>Before selling or renting out a property for a better first impression.</li></ul>',
+      service_3_title: 'Commercial cleaning',
+      service_3_content: '<h3>Commercial cleaning</h3><p><strong>Service includes:</strong></p><ul class="service-list"><li><strong>Office surfaces:</strong><br>Cleaning desks, computer equipment (dust), cabinets and meeting rooms.</li><li><strong>Common areas:</strong><br>Cleaning kitchenettes, changing rooms and hallways.</li><li><strong>Restrooms:</strong><br>Regular daily cleaning of toilet areas.</li><li><strong>Floors:</strong><br>Vacuuming carpets and mopping hard floors.</li><li><strong>Waste:</strong><br>Regular bin emptying and waste separation.</li></ul>',
+      service_4_title: 'Minor repairs and property maintenance',
+      service_4_content: '<h3>Minor repairs and property maintenance</h3><p><strong>Service includes:</strong></p><ul class="service-list"><li><strong>General repairs:</strong><br>Replacing light bulbs, mounting shelves, pictures or curtain rods.</li><li><strong>Electrical work:</strong><br>Replacing outlets, switches or installing lights.</li><li><strong>Exterior maintenance:</strong><br>Gutter cleaning, yard upkeep or pressure washing terraces.</li></ul>',
+      service_5_title: 'Short-term rental cleaning (Airbnb / Booking)',
+      service_5_content: '<h3>Short-term rental cleaning (Airbnb / Booking)</h3><p><strong>Service covers:</strong></p><ul class="service-list"><li><strong>Fast and thorough cleaning:</strong><br>Preparing the space for new guests in a short time.</li><li><strong>Linen and towel change:</strong><br>Collection of used laundry and setup of fresh sets.</li><li><strong>Supplies restocking:</strong><br>Checking and restocking toilet paper, soap, coffee, tea and other consumables.</li><li><strong>Inspection check:</strong><br>Checking for possible damage after guest checkout and reporting to owner.</li><li><strong>Space refresh:</strong><br>Ventilation and ensuring a pleasant scent in all rooms.</li></ul>',
+      before_after_title: 'Results speak for themselves',
+      before_label: 'BEFORE',
+      after_label: 'AFTER',
+      footer_company_title: 'Company information',
+      footer_company_text: '<strong>TA+, cleaning and other services</strong><br>Tamara Meden s.p.<br>Gerbičeva ulica 5A<br>1380 Cerknica<br>Tax number: 54164168',
+      footer_contact_title: 'Contact details',
+      footer_legal_title: 'Legal documents',
+      footer_privacy: 'Privacy policy',
+      footer_gdpr: 'GDPR',
+      footer_follow: 'Follow us',
+      footer_rights: '© 2026 TA+ | All rights reserved',
+      toggle_more: 'Show more',
+      toggle_less: 'Show less'
+    }
+  };
+
+  const langButtons = document.querySelectorAll('.lang-btn');
+
+  function initServiceAccordions(lang) {
+    const copy = i18n[lang] || i18n.sl;
+
+    document.querySelectorAll('.services-page .card .card-content').forEach(cardContent => {
+      const items = Array.from(cardContent.children);
+      if (items.length <= 2) {
+        return;
+      }
+
+      const details = document.createElement('div');
+      details.className = 'service-details';
+      details.hidden = true;
+
+      items.slice(2).forEach(element => {
+        details.appendChild(element);
+      });
+
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'service-toggle';
+      toggle.innerHTML = `<span class="service-toggle__text">${copy.toggle_more}</span><span class="service-toggle__icon" aria-hidden="true">▾</span>`;
+
+      toggle.addEventListener('click', function() {
+        const expanded = !details.hidden;
+        details.hidden = expanded;
+        toggle.classList.toggle('is-open', !expanded);
+        toggle.querySelector('.service-toggle__text').textContent = expanded ? copy.toggle_more : copy.toggle_less;
+      });
+
+      cardContent.appendChild(details);
+      cardContent.appendChild(toggle);
+    });
+  }
+
+  function setLanguage(lang) {
+    const selected = i18n[lang] ? lang : 'sl';
+    const translations = i18n[selected];
+
+    document.documentElement.lang = selected;
+    document.title = translations.page_title;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+
+    if (metaDescription && translations.meta_description) metaDescription.setAttribute('content', translations.meta_description);
+    if (ogTitle && translations.og_title) ogTitle.setAttribute('content', translations.og_title);
+    if (ogDescription && translations.og_description) ogDescription.setAttribute('content', translations.og_description);
+    if (ogLocale && translations.og_locale) ogLocale.setAttribute('content', translations.og_locale);
+    if (twitterTitle && translations.twitter_title) twitterTitle.setAttribute('content', translations.twitter_title);
+    if (twitterDescription && translations.twitter_description) twitterDescription.setAttribute('content', translations.twitter_description);
+
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      if (translations[key]) {
+        element.textContent = translations[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(element => {
+      const key = element.getAttribute('data-i18n-html');
+      if (translations[key]) {
+        element.innerHTML = translations[key];
+      }
+    });
+
+    initServiceAccordions(selected);
+
+    langButtons.forEach(button => {
+      const isActive = button.dataset.lang === selected;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    localStorage.setItem('siteLanguage', selected);
+
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set('lang', selected);
+    window.history.replaceState({}, '', `${currentUrl.pathname}${currentUrl.search}${currentUrl.hash}`);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', `https://taplus.si/storitve.html?lang=${selected}`);
+    }
+  }
+
+  langButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      setLanguage(button.dataset.lang);
+    });
+  });
+
+  const languageFromUrl = new URLSearchParams(window.location.search).get('lang');
+  const savedLanguage = (languageFromUrl && i18n[languageFromUrl]) ? languageFromUrl : (localStorage.getItem('siteLanguage') || 'sl');
+  setLanguage(savedLanguage);
+
   // Hamburger menu toggle
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileNav = document.getElementById('mobile-nav');
